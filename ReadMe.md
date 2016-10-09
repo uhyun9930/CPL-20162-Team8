@@ -1,6 +1,6 @@
-#RaspberryPi3 GPIO device control software#
+*RaspberryPi3 GPIO device control software*
 
-*Author: JungHun, Kim
+*Author: _JungHun, Kim_
 *Published Date: 09-OCT-2016
 *Version: 1.1
 
