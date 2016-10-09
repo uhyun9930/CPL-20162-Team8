@@ -1,8 +1,8 @@
 *RaspberryPi3 GPIO device control software*
 
-*Author: _JungHun, Kim_*
-*Published Date: 09-OCT-2016*
-*Version: 1.1*
+Author: _JungHun, Kim_
+Published Date: 09-OCT-2016
+Version: 1.1
 
 
 1. Operating System and Device Specification
@@ -11,8 +11,8 @@
 
 2. Software Specification
 	1. Network Specification: CoAP Communication
-     	2. GPIO Information: See the pinInformation.h file.
-	3.) Command Information: See the piManager.h file.
+	2. GPIO Information: See the pinInformation.h file.
+	3. Command Information: See the piManager.h file.
 
 3. Socket properties
 	1. socket port: 63637 (It can be changed at piManager.c)
@@ -28,10 +28,10 @@
 	3. Lux Sensor :           Rohm BH1750FVI
 
 5. Logfile Specification
-	6. 1) Log file must be saved into /log/<starttime.txt>
-	6. 2) All of related messages saved into logfile.
-    	6. 3) LiveMessage must be saved into /liveMsg/<starttime.txt>
-    	6. 4) When the date changed, each logfile will be newly generated.
+	1. Log file must be saved into /log/<starttime.txt>
+	2. All of related messages saved into logfile.
+    	3. LiveMessage must be saved into /liveMsg/<starttime.txt>
+    	4. When the date changed, each logfile will be newly generated.
 
 6. Compile and Debug
 	1. Makefile is supported.
@@ -48,7 +48,7 @@
 	6. Makefile         : compile script
 	7. piManager        : executable file (It must be executed with root permission)
 	8. log              : directory of logfile.
-    	9. smbus.h          : header of smbus.c
+	9. smbus.h          : header of smbus.c
 	10. smbus.c          : Library of I2C Communication
 	11. luxManager.h     : header of luxManager.c
 	12. luxManager.c     : implemantation of lux functions.
