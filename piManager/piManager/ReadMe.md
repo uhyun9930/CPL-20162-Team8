@@ -30,8 +30,8 @@ Version: 1.1
 5. Logfile Specification
 	1. Log file must be saved into /log/<starttime.txt>
 	2. All of related messages saved into logfile.
-    	3. LiveMessage must be saved into /liveMsg/<starttime.txt>
-    	4. When the date changed, each logfile will be newly generated.
+	3. LiveMessage must be saved into /liveMsg/<starttime.txt>
+	4. When the date changed, each logfile will be newly generated.
 
 6. Compile and Debug
 	1. Makefile is supported.
