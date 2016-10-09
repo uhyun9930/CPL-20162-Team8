@@ -44,6 +44,6 @@ uint8 SHT11_HUMI(void);
 uint8 SHT11_TEMP(void);
 void calc_sht11(void);
 void sht11_sensor_run(void);
-void* getTempValue();
+static void* getTempValue(void* pArg);
 
 #endif
