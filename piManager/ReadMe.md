@@ -49,7 +49,7 @@
 	7. piManager        : executable file (It must be executed with root permission)
 	8. log              : directory of logfile.
     	9. smbus.h          : header of smbus.c
-    	10. smbus.c          : Library of I2C Communication
-    	11. luxManager.h     : header of luxManager.c
- 	12. luxManager.c     : implemantation of lux functions.
+	10. smbus.c          : Library of I2C Communication
+	11. luxManager.h     : header of luxManager.c
+	12. luxManager.c     : implemantation of lux functions.
  

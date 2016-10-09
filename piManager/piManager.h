@@ -1,4 +1,4 @@
-#ifndef __PIMANAGER_H
+# ifndef __PIMANAGER_H
 #define __PIMANAGER_H
 
 /* include headers */
@@ -11,10 +11,7 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 #include <sys/socket.h>
-#include "motorManager.h"
-#include "doorManager.h"
 #include "tempManager.h"
-#include "powerManager.h"
 #include "pinInformation.h"
 #include "luxManager.h"
 
@@ -30,10 +27,6 @@
 #define COMMAND_GET_TEMP		601
 #define COMMAND_GET_DOOR		602
 #define COMMAND_STANDBY			603
-#define COMMAND_POWER			604
-#define COMMAND_IRIS_MOTOR		605
-#define COMMAND_FOCUS_MOTOR		606
-#define COMMAND_ZOOM_MOTOR		607
 #define COMMAND_EXIT			608
 #define COMMAND_WRONG_CONNECT	609
 #define COMMAND_NO_OPTION		610
@@ -48,16 +41,12 @@ typedef struct __COMMAND
 {
 	int command;
 	int ret_val;
-	struct __MOTORPARAMS *motorP;
-	struct __POWERPARAMS *powerP;
 } command;
 
 /* Declare Functions */
 void gpio_initialize(FILE *fp_log);
 void gpio_terminate(FILE *fp_log);
 command* command_initialize();
-motorParams* command_createMotorParams(int steps, int direction);
-powerParams* command_createPowerParams(int order);
 void getCurrentTime(int option, char *currentTime);
 FILE* log_initialize(char *f_name);
 void log_putMessage(FILE* fp_log, char* message);

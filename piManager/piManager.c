@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include "piManager.h"
 
-int doorState;
 int waitFlag;
 int server_flag;
 unsigned int globalLux;
@@ -496,37 +495,6 @@ void command_parsing(command* c, char *msg)
 		return ;
 	}
 
-}
-
-motorParams* command_createMotorParams(int steps, int direction)
-{
-	motorParams *m = (motorParams *) malloc(sizeof(motorParams));
-	if (m == NULL)
-	{
-		fprintf(stderr, "Memory allocation error: command_createMotorParams()\n");
-		return NULL;
-	}
-
-	m->direction = direction;
-	m->steps = steps;
-	m->result = FALSE;
-
-	return m;
-}
-
-powerParams* command_createPowerParams(int order)
-{
-	powerParams *p = (powerParams *) malloc(sizeof(powerParams));
-	if (p == NULL)
-	{
-		fprintf(stderr, "Memory allocation error: command_createPowerParams()\n");
-		return NULL;
-	}
-
-	p->order = order;
-	p->result = FALSE;
-
-	return p;
 }
 
 void getCurrentTime(int option, char* buf)
