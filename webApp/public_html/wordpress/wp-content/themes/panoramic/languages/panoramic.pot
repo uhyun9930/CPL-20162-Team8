@@ -1,0 +1,930 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: panoramic\n"
+"POT-Creation-Date: 2016-09-25 22:05+0200\n"
+"PO-Revision-Date: 2016-09-25 22:06+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_e;esc_attr_x\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:14 customizer/customizer-options.php:395
+msgid "404!"
+msgstr ""
+
+#: 404.php:19 customizer/customizer-options.php:402
+msgid "The page you were looking for cannot be found!"
+msgstr ""
+
+#: 404.php:23 library/template-parts/content-none.php:28
+#: library/template-parts/content-none.php:38
+msgid "Back to Homepage"
+msgstr ""
+
+#: comments.php:35 comments.php:49
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:36 comments.php:50
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:37 comments.php:51
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:61
+msgid "Comments are closed."
+msgstr ""
+
+#: customizer/customizer-library/extensions/fonts.php:18
+msgid "Standard Fonts"
+msgstr ""
+
+#: customizer/customizer-library/extensions/fonts.php:20
+msgid "Google Fonts"
+msgstr ""
+
+#: customizer/customizer-library/extensions/fonts.php:125
+msgid "All"
+msgstr ""
+
+#: customizer/customizer-library/extensions/fonts.php:126
+msgid "Cyrillic"
+msgstr ""
+
+#: customizer/customizer-library/extensions/fonts.php:127
+msgid "Cyrillic Extended"
+msgstr ""
+
+#: customizer/customizer-library/extensions/fonts.php:128
+msgid "Devanagari"
+msgstr ""
+
+#: customizer/customizer-library/extensions/fonts.php:129
+msgid "Greek"
+msgstr ""
+
+#: customizer/customizer-library/extensions/fonts.php:130
+msgid "Greek Extended"
+msgstr ""
+
+#: customizer/customizer-library/extensions/fonts.php:131
+msgid "Khmer"
+msgstr ""
+
+#: customizer/customizer-library/extensions/fonts.php:132
+msgid "Latin"
+msgstr ""
+
+#: customizer/customizer-library/extensions/fonts.php:133
+msgid "Latin Extended"
+msgstr ""
+
+#: customizer/customizer-library/extensions/fonts.php:134
+msgid "Vietnamese"
+msgstr ""
+
+#: customizer/customizer-options.php:31
+msgid "Site Identity"
+msgstr ""
+
+#: customizer/customizer-options.php:38
+msgid "Logo"
+msgstr ""
+
+#: customizer/customizer-options.php:49 customizer/customizer-options.php:75
+msgid "Layout"
+msgstr ""
+
+#: customizer/customizer-options.php:55
+msgid "Full width WooCommerce Shop page"
+msgstr ""
+
+#: customizer/customizer-options.php:66
+msgid "Header"
+msgstr ""
+
+#: customizer/customizer-options.php:84
+msgid "Show Top Bar"
+msgstr ""
+
+#: customizer/customizer-options.php:91
+msgid "Info Text"
+msgstr ""
+
+#: customizer/customizer-options.php:94
+#: library/template-parts/header-standard.php:55
+#: library/template-parts/top-bar.php:11
+msgid "<strong><em>CALL US:</em></strong> 555-PANORAMIC"
+msgstr ""
+
+#: customizer/customizer-options.php:98
+msgid "Shop Links"
+msgstr ""
+
+#: customizer/customizer-options.php:102
+msgid "Display the My Account and Checkout links when WooCommerce is active."
+msgstr ""
+
+#: customizer/customizer-options.php:106
+msgid "Show Search"
+msgstr ""
+
+#: customizer/customizer-options.php:118
+msgid "Social Media Links"
+msgstr ""
+
+#: customizer/customizer-options.php:124
+msgid "Email Address"
+msgstr ""
+
+#: customizer/customizer-options.php:130
+msgid "Skype Name"
+msgstr ""
+
+#: customizer/customizer-options.php:137
+msgid "Tumblr"
+msgstr ""
+
+#: customizer/customizer-options.php:143
+msgid "Flickr"
+msgstr ""
+
+#: customizer/customizer-options.php:154
+msgid "Search"
+msgstr ""
+
+#: customizer/customizer-options.php:160
+msgid "Default Search Input Text"
+msgstr ""
+
+#: customizer/customizer-options.php:163
+msgid "Search..."
+msgstr ""
+
+#: customizer/customizer-options.php:168
+msgid "No Search Results Heading"
+msgstr ""
+
+#: customizer/customizer-options.php:171
+#: library/template-parts/content-none.php:11
+msgid "Nothing Found!"
+msgstr ""
+
+#: customizer/customizer-options.php:175
+msgid "No Search Results Message"
+msgstr ""
+
+#: customizer/customizer-options.php:178
+#: library/template-parts/content-none.php:24
+#: library/template-parts/content-none.php:34
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: customizer/customizer-options.php:187
+msgid "Mobile Menu"
+msgstr ""
+
+#: customizer/customizer-options.php:197
+msgid "Slider"
+msgstr ""
+
+#: customizer/customizer-options.php:208
+msgid "Choose a Slider"
+msgstr ""
+
+#: customizer/customizer-options.php:217
+msgid "Select Categories"
+msgstr ""
+
+#: customizer/customizer-options.php:220
+msgid ""
+"Select the categories of the posts you want to display in the slider. The "
+"featured image will be the slide image and the post content will display "
+"over it. Hold down the Ctrl (windows) / Command (Mac) button to select "
+"multiple categories."
+msgstr ""
+
+#: customizer/customizer-options.php:225
+msgid "Slide Transition Speed"
+msgstr ""
+
+#: customizer/customizer-options.php:229
+msgid ""
+"The speed it takes to transition between slides in milliseconds. 1000 "
+"milliseconds equals 1 second."
+msgstr ""
+
+#: customizer/customizer-options.php:234
+msgid "Slider Shortcode"
+msgstr ""
+
+#: customizer/customizer-options.php:237
+msgid "Enter the shortcode given by the slider plugin you're using."
+msgstr ""
+
+#: customizer/customizer-options.php:246
+msgid "Header Image"
+msgstr ""
+
+#: customizer/customizer-options.php:252
+msgid "Text"
+msgstr ""
+
+#: customizer/customizer-options.php:264
+msgid "Colors"
+msgstr ""
+
+#: customizer/customizer-options.php:270
+msgid "Primary Color"
+msgstr ""
+
+#: customizer/customizer-options.php:277
+msgid "Secondary Color"
+msgstr ""
+
+#: customizer/customizer-options.php:285
+msgid "Footer Color"
+msgstr ""
+
+#: customizer/customizer-options.php:298
+msgid "Fonts"
+msgstr ""
+
+#: customizer/customizer-options.php:304
+msgid "Site Title Font"
+msgstr ""
+
+#: customizer/customizer-options.php:313
+msgid "Heading Font"
+msgstr ""
+
+#: customizer/customizer-options.php:321
+msgid "Heading Font Color"
+msgstr ""
+
+#: customizer/customizer-options.php:329
+msgid "Body Font"
+msgstr ""
+
+#: customizer/customizer-options.php:337
+msgid "Body Font Color"
+msgstr ""
+
+#: customizer/customizer-options.php:349
+msgid "Blog"
+msgstr ""
+
+#: customizer/customizer-options.php:359
+msgid "Archive Layout"
+msgstr ""
+
+#: customizer/customizer-options.php:368
+msgid "Excerpt Length"
+msgstr ""
+
+#: customizer/customizer-options.php:376
+msgid "Read More Text"
+msgstr ""
+
+#: customizer/customizer-options.php:387
+msgid "Website Text"
+msgstr ""
+
+#: customizer/customizer-options.php:392
+msgid "404 Page Heading"
+msgstr ""
+
+#: customizer/customizer-options.php:399
+msgid "404 Page Message"
+msgstr ""
+
+#: footer.php:22
+msgid "Add widgets to the Footer at Appearance > Widgets"
+msgstr ""
+
+#: footer.php:36
+#, php-format
+msgid "Theme by %1$s"
+msgstr ""
+
+#: functions.php:58
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:59
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:116
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:126
+msgid "Footer"
+msgstr ""
+
+#: functions.php:217
+msgid "Upgrade To Premium &raquo;"
+msgstr ""
+
+#: functions.php:271
+msgid "Read More"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:333
+msgid "Install Required Plugins"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:334
+msgid "Install Plugins"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:335
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:336
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:397
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:398
+msgid "Return to the dashboard"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:399
+#: library/includes/class-tgm-plugin-activation.php:3021
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:400
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:402
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:403
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:404
+msgid "Dismiss this notice"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:405
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2159
+msgid "Required"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2162
+msgid "Recommended"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2178
+msgid "WordPress Repository"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2181
+msgid "External Source"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2184
+msgid "Pre-Packaged"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2201
+msgid "Not Installed"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2205
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2207
+msgid "Active"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2213
+msgid "Required Update not Available"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2216
+msgid "Requires Update"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2219
+msgid "Update recommended"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2371
+msgid "Installed version:"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2379
+msgid "Minimum required version:"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2391
+msgid "Available version:"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2414
+#, php-format
+msgid ""
+"No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
+"Dashboard</a>"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2428
+msgid "Plugin"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2429
+msgid "Source"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2430
+msgid "Type"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2434
+msgid "Version"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2435
+msgid "Status"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2595
+msgid "Install"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2601
+msgid "Update"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2604
+msgid "Activate"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2635
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2637
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2673
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:2675
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:3020
+msgid "Plugin activation failed."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:3354
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:3356
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:3357
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:3361
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:3362
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:3363
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:3364
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:3367
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:3369
+msgid "All installations have been completed."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:3370
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: library/includes/extras.php:64
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: library/includes/template-tags.php:21
+msgid "Posts navigation"
+msgstr ""
+
+#: library/includes/template-tags.php:25
+msgid "Older posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: library/includes/template-tags.php:29
+msgid "<span class=\"meta-nav\">&larr;</span> Newer posts"
+msgstr ""
+
+#: library/includes/template-tags.php:52
+msgid "Post navigation"
+msgstr ""
+
+#: library/includes/template-tags.php:106
+#: library/includes/template-tags.php:112
+msgid ", "
+msgstr ""
+
+#: library/includes/template-tags.php:108
+#, php-format
+msgid "Posted in %1$s "
+msgstr ""
+
+#: library/includes/template-tags.php:114
+#, php-format
+msgid "Tagged %1$s "
+msgstr ""
+
+#: library/includes/template-tags.php:120
+msgid "Leave a comment "
+msgstr ""
+
+#: library/includes/template-tags.php:120
+msgid "1 Comment "
+msgstr ""
+
+#: library/includes/template-tags.php:120
+msgid "% Comments "
+msgstr ""
+
+#: library/includes/template-tags.php:124
+#: library/includes/template-tags.php:173
+#: library/includes/template-tags.php:201
+#: library/template-parts/content-page.php:22
+msgid "Edit"
+msgstr ""
+
+#: library/includes/template-tags.php:173
+msgid "Pingback:"
+msgstr ""
+
+#: library/includes/template-tags.php:183
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr ""
+
+#: library/includes/template-tags.php:187
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: library/includes/woocommerce-inc.php:9
+#: library/template-parts/header-standard.php:41
+#: library/template-parts/top-bar.php:28
+msgid "View your shopping cart"
+msgstr ""
+
+#: library/includes/woocommerce-inc.php:14
+#: library/template-parts/header-standard.php:46
+#: library/template-parts/top-bar.php:33
+msgid "Checkout"
+msgstr ""
+
+#: library/template-parts/content-none.php:18
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: library/template-parts/content-page.php:15
+#: library/template-parts/content-search.php:68
+#: library/template-parts/content-single.php:23
+#: library/template-parts/content.php:64
+msgid "Pages:"
+msgstr ""
+
+#: library/template-parts/content-search.php:57
+#: library/template-parts/content.php:53
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: library/template-parts/header-standard.php:36
+#: library/template-parts/top-bar.php:23
+msgid "My Account"
+msgstr ""
+
+#: library/template-parts/header-standard.php:38
+#: library/template-parts/top-bar.php:25
+msgid "Login"
+msgstr ""
+
+#: library/template-parts/header-standard.php:38
+#: library/template-parts/top-bar.php:25
+msgid "Sign In / Register"
+msgstr ""
+
+#: library/template-parts/social-links.php:4
+msgid "Send us an email"
+msgstr ""
+
+#: library/template-parts/social-links.php:8
+msgid "Contact us on Skype"
+msgstr ""
+
+#: library/template-parts/social-links.php:12
+msgid "Find us on Tumblr"
+msgstr ""
+
+#: library/template-parts/social-links.php:16
+msgid "Find us on Flickr"
+msgstr ""
+
+#: search.php:22
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:11
+msgid "&nbsp;"
+msgstr ""
+
+#: sidebar.php:12
+msgid "Add widgets to the Sidebar at Appearance > Widgets"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:4
+msgid "Upgrade to Panoramic Premium"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:8
+msgid "Panoramic"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:11
+msgid "Upgrade to Premium - <strong>$20</strong>"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:12
+#, php-format
+msgid "<a href='%s' target='_blank' class='upgrade button red'>Upgrade Now</a>"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:15
+msgid "Why Upgrade?"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:18
+msgid ""
+"If you've enjoyed using our Panoramic theme to build your website, you'll "
+"love the PREMIUM version!"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:24
+msgid "Prioritised support"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:26
+msgid "Guiding you every step of the way!"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:31
+msgid "Continuous Updates"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:33
+msgid "Ensuring your site operates on all future WordPress releases!"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:38
+msgid "Loads of extra features & options"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:40
+msgid "Helping you build the website you want!"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:46
+msgid "Here's what Panoramic Premium offers:"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:50
+msgid "One page website mode"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:53
+msgid "Boxed or full-width layout"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:56
+msgid ""
+"Link to all your social media profiles - Facebook, Twitter, Instagram and "
+"more"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:59
+msgid ""
+"Place your social media links in any widgetized area with the Social Media "
+"Links widget"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:62
+msgid "Sticky header option - logo and menu stay visible while scrolling"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:65
+msgid "Set the font weight of the site title"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:68
+msgid ""
+"The option to display the logo and site title / tagline at the same time"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:71
+msgid ""
+"Enhanced slider functionality like slideshow mode, different transition "
+"effects and button and text styling"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:74
+msgid "Display the slider across all pages and Blog posts"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:77
+msgid ""
+"Display any third party slider plugin on any page or Blog post via the "
+"Slider Shortcode field"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:80
+msgid "Toggle the displaying of all page and post titles"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:83
+msgid "Additional Secondary and Shop sidebars"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:86
+msgid "Additonal page templates that don't display page titles"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:89
+msgid "Choose to show or hide the footer widgets area"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:92
+msgid "Editable website footer text"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:95
+msgid "Set the screen width at which you want the mobile menu to activate"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:98
+msgid "Dark or light mobile menu color scheme option"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:101
+msgid "Full width Blog pages"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:104
+msgid "Side or top Blog page layout"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:107
+msgid ""
+"Hide the author, date, tags and categories, and comment count on the Blog"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:110
+msgid "Disable the featured image displaying on the single Blog post page"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:113
+msgid "Display a \"Back to top\" button"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:119
+msgid ""
+"Upgrading is seamless and you won't lose your content, images or theme "
+"settings. However you will lose any code customizations \n"
+"\t\t\t\t\t(CSS, PHP, JavaScript, etc.) that you have made to the free theme."
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:128
+msgid "Like our work? We'd love to hear!"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:130
+msgid ""
+"Out the Box offers high quality FREE WordPress themes with affordable "
+"premium upgrade options."
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:134
+#, php-format
+msgid ""
+"If you've enjoyed using  this theme or have found our support helpful, <a "
+"href='%s' target='_blank'>write a quick review</a> and help us make more "
+"great themes!"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:139
+msgid "Our happy customers"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:147
+msgid ""
+"Thank you very much for your wonderful support! I was able to set up the "
+"slider for static pages. I don't understand how it worked but it worked! I "
+"am really happy! I didn't know what else I could do, so I purchased premium "
+"version today to express my gratitude. Please keep up your good work!"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:150
+msgid "Yuka"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:156
+msgid ""
+"Will you have new themes any time soon? I love the simplicity of your "
+"themes. Keep up the good work."
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:159
+msgid "George Nicholas"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:165
+msgid ""
+"Thank you so much! If you weren't across an ocean I'd kiss you! I appreciate "
+"all of the help and your theme is just stunning! Exactly what I needed and "
+"you can quote me on that!"
+msgstr ""
+
+#: upgrade/library/template-parts/content-upgrade.php:168
+msgid "Cherise Carter"
+msgstr ""
+
+#: upgrade/upgrade.php:14 upgrade/upgrade.php:15
+msgid "Panoramic Premium"
+msgstr ""

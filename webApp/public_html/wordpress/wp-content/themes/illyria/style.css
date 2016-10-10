@@ -1,0 +1,380 @@
+/*
+ Theme Name:   Illyria
+ Description:  Illyria is a beautiful multi purpose theme, excelent for lawyers or any other business domain, with many options for customization.
+ Author:       Themeisle
+ Author URI:   https://themeisle.com
+ Template:     lawyeria-lite
+ Version:      1.0.2
+ License:      GNU General Public License version 2
+ License URI:  license.txt
+ Tags:         blue, white, one-column, two-columns, right-sidebar, responsive-layout, custom-background, custom-menu, editor-style, featured-images, threaded-comments, translation-ready
+*/
+
+
+/*--------------------------------------------------------------
+General
+--------------------------------------------------------------*/
+
+
+/* HEADER */
+
+.wrap-elements{
+	background: rgba(25, 35, 45, 0.74) none repeat scroll 0% 0% !important;
+	box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.4);
+    position: absolute;
+	width: 100%;
+}
+
+
+.wide-header {
+    width: 100%;
+    margin: 0px;
+    background: rgba(0, 0, 0, 0.3) none repeat scroll 0% 0%;
+    border-bottom: 1px solid #2f4154;
+}
+	
+
+#subheader .subheader-color {
+	width: 100%;
+	height: 500px !important;
+    background: rgba(48, 48, 48, 0.83) none repeat scroll 0% 0% !important;
+    padding-bottom: 72px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4) inset;
+	-moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4) inset;
+	-webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4) inset;
+	-ms-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4) inset;
+}
+
+#subheader .subheader-color .full-header-content-no-sidebar {
+	width: 100%;
+	margin-top: 290px !important;
+}
+
+#subheader .subheader-color .full-header-content {
+    width: 515px;
+    margin-top: 320px;
+    float: left;
+}
+
+#subheader .subheader-color .header-form {
+    width: 294px;
+    background: none repeat scroll 0% 0% #FFF;
+    margin-top: 280px;
+    padding: 27px 30px;
+    border: 3px solid #F3F3F3;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);`
+    float: right;
+}
+
+
+.wrapper h3{
+    color: #3B3126 !important;
+}
+
+
+.header-contact {
+    margin-top: 30px;
+    line-height: 20px;
+    color: #BCBCBC !important;
+    text-align: right;
+    font-weight: 700;
+    float: right;
+    font-size: 17px;
+}
+
+.header-contact span a {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.header-left .logo img {
+    width: auto;
+    max-height: 100%;
+    margin-top: 3px;
+}
+
+
+nav ul {
+    list-style: outside none none;
+    float: right;
+    margin-left: -10px;
+}
+.wide-nav {
+    width: 100%;
+    height: 100px;
+    line-height: 90px;
+    background: none repeat scroll 0% 0% rgb(238, 238, 238) !important;
+}
+
+
+/* GENERAL */ 
+
+#features {
+    width: 100%;
+    background: url("images/cream_pixels.png") repeat;
+    padding: 60px 0px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15) inset;
+    float: left;
+}
+
+
+nav li a {
+    padding: 5px 10px;
+    display: block;
+    color: #F9F9F9 !important;
+    text-decoration: none;
+    border: 1px solid transparent;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+nav li a:hover {
+    color: #3497db !important;
+    border: 1px solid #3497db;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  
+}
+
+nav  li + li {
+    background:url('images/lists-dot2.png') no-repeat 0px 10px;
+    padding-left: 20px
+}
+
+.children li {
+    background: none;
+    padding-left: 0px;
+}
+
+nav li {
+    height: 40px;
+    margin-left: 20px;
+    position: relative;
+    float: left;
+}
+
+nav li ul li a {
+    background: #2f4154 !important;
+}
+
+nav li ul li a:hover {
+    background: #1e2a36 !important;
+    color: white !important;
+    border: none;
+}
+
+#subheader .subheader-color .full-header-content h3 {
+    width: 100%;
+    color: #FFF !important;
+    text-shadow: none;
+    line-height: 42px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+
+}
+
+
+#subheader .second-subheader h3 {
+    margin: 0px 155px;
+    line-height: 42px;
+    color: #3497db !important;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+#content .content-article h3 {
+    font-family: "Lato",sans-serif;
+    font-weight: 600;
+    color: #272F4D !important;
+
+}
+
+#sidebar-right .widget .searchform input#searchsubmit {
+    height: 30px;
+    background: none repeat scroll 0% 0% #cca876 !important;
+    margin: 10px 0px 0px;
+    padding: 5px 15px;
+    color: #FFF;
+    border: medium none;
+    display: block;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.widget.widget_testimonials-widget .prev {
+    width: 30px;
+    height: 30px;
+    background: url("images/posts-navigation-left-arrow.png") no-repeat scroll center center #cca876;
+    margin-top: -15px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+    float: left;
+}
+.widget.widget_testimonials-widget .next {
+    width: 30px;
+    height: 30px;
+    background: url("images/posts-navigation-right-arrow.png") no-repeat scroll center center #cca876;
+    margin-top: -15px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+    float: right;
+}
+
+.widget.widget_testimonials-widget {
+    float: left;
+    width: 100%;
+    margin-top: 100px;
+}
+
+#content .content-article p {
+    margin-top: 25px;
+    line-height: 24px;
+    color: #A1A1A1;
+    font-family: 'Lato', sans-serif;
+    text-align: justify;
+}
+
+.widget.widget_practiceareas-widget ul li a {
+    color: rgb(204, 168, 118) !important;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.widget.widget_practiceareas-widget ul li {
+    width: 233px;
+    list-style: inside url("images/lists-dot.png") disc;
+    margin-bottom: 9px;
+    float: left;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.widget.widget_practiceareas-widget h4, .widget.widget_ourlawyers-widget h4 {
+  
+  color: #929292 !important;
+   
+}
+
+#comments-template .comment-respond .comment-form #contact_submit {
+
+    background: #3497DB none repeat scroll 0% 0% !important;
+    border: 2px solid #3497DB;
+    box-shadow: none;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
+    color: #FFF;
+    display: block;
+    border-radius: 3px;
+
+}
+
+#content .content-article .content-article-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 3px;
+}
+
+#features .features-box {
+    width: 282px;
+    background: #FFF none repeat scroll 0% 0%;
+    margin-left: 59px;
+    padding: 30px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    float: left;
+    border-bottom: 6px solid #F2F2F2;
+    border-radius: 3px;
+}
+
+#content .content-article .content-article-image {
+    width: 362px;
+    height: auto;
+    margin-left: 28px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    float: right;
+}
+
+.post .post-meta a {
+    line-height: 24px;
+    color: #3497DB !important;
+    text-decoration: none;
+}
+
+
+
+/* FOOTER */
+
+#footer .footer-box .searchform input#searchsubmit {
+    height: 30px;
+    background: none repeat scroll 0% 0% #605F5B !important;
+    margin: 10px 0px 0px;
+    padding: 5px 15px;
+    color: #FFF;
+    border: medium none;
+    display: block;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+#footer {
+    width: 100%;
+    background: #19232d repeat scroll 0% 0% !important;
+    padding: 60px 0px;
+    float: left;
+    border-bottom: 10px solid #121A23;
+}
+
+
+#footer .footer-box .searchform .screen-reader-text {
+    width: 100%;
+    display: block;
+    font-size: 20px;
+    color: #cca876 !important;
+    font-weight: bold;
+
+}
+#footer .footer-box .footer-box-title {
+    width: 100%;
+    color: #FFF;
+    margin-bottom: 18px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #cca876 !important;
+}
+#footer .footer-box .searchform input#searchsubmit:hover {
+    background: #cca876 !important;
+
+}      
+.widget-our-lawyers p {
+    margin-top: 35px;
+}
+#footer .footer-box .wpcf7-submit{
+    background: #cca876 !important;
+    border: 2px solid #af9065 !important;
+}
+
+#footer .footer-box .wpcf7-submit:hover{
+    background: #af9065 !important;
+   
+}
+
+#footer .footer-box .footer-socials a.social-button {
+    line-height: 19px;
+    color: #FFF !important;
+    text-align: center;
+    font-size: 10px;
+    background: #cca876 !important;
+}
+
+
+<link href='http://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'> 
