@@ -1,9 +1,11 @@
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.Scanner;
 
 import org.eclipse.californium.core.CoapClient;
 import org.eclipse.californium.core.CoapHandler;
 import org.eclipse.californium.core.CoapResponse;
+import org.eclipse.californium.core.CoapServer;
 import org.eclipse.californium.core.Utils;
 import org.eclipse.californium.core.coap.MediaTypeRegistry;
 
@@ -29,18 +31,30 @@ public class CoAPClient {
 
 		CoapClient client = new CoapClient(uri);
 
-		CoapResponse response = client.post("Hello world".getBytes(), MediaTypeRegistry.TEXT_PLAIN);
+		Scanner input = new Scanner(System.in);
+		
+		while (true)
+		{
+		String stmt = input.nextLine();
+		// 생성
+		CoapResponse response = client.post(stmt.getBytes(), MediaTypeRegistry.TEXT_PLAIN);
 		printResponse(response);
 
-		response = client.put("Hello world".getBytes(), MediaTypeRegistry.TEXT_PLAIN);
+		
+		// 수정
+		response = client.put(stmt.getBytes(), MediaTypeRegistry.TEXT_PLAIN);
 		printResponse(response);
 
+		
+		// 사용
 		response = client.get();
 		printResponse(response);
 
+		
+		// 삭제
 		response = client.delete();
 		printResponse(response);
-
+		}
 	}
 
 	public static void printResponse(CoapResponse response) {
