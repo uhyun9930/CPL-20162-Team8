@@ -21,7 +21,10 @@ include("dbconnect.php");
  if($count==1)
  {
   echo "
-   echo "<meta http-equiv='refresh' content = '0; url=http://localhost/Welcome.php'>";
+	.<script>document.location.href='new.php'</script>
+
+
+     //<a href='new.php'>go</a>
   ";
   exit;
  }
@@ -39,11 +42,11 @@ include("dbconnect.php");
  	 
  // 연결 확인
  
-// setcookie("hwi",$email,0,"/");
-// $hwi = $_COOKIE['hwi'];
+ setcookie("hwi","$email",0,"/");
+ $hwi = $_COOKIE[hwi];
  
  mysqli_close($conn); 
  
 
- //echo ("<meta http-equiv = 'Refresh' content='1; URL=green.php' >");
+
 ?>
