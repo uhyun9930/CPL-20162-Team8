@@ -1,0 +1,163 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3691C"
+    android:orientation="vertical"
+
+    >
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D3D3d3"
+    tools:context="com.example.and.drawer.Set">
+
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="남자"
+                android:textOn="여자"
+                android:checked="true"
+                android:layout_gravity="left"
+
+                android:id="@+id/switch1" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:text="나이"
+                        android:id="@+id/textView2" />
+
+                    <EditText
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:id="@+id/editText"
+                        android:hint="20"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="현재체중(kg)"
+                        android:id="@+id/textView3" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:gravity="right"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/editText2"
+                        android:hint="50"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="목표체중(kg)"
+                        android:id="@+id/textView4" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:id="@+id/editText3"
+                        android:hint="45"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="키(cm)"
+                        android:id="@+id/textView5" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:hint="165"
+                        android:id="@+id/editText4" />
+                </TableRow>
+
+
+            </TableLayout>
+
+            <Button
+                android:layout_span="2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:id="@+id/setfirst"
+                android:drawablePadding="18dip"
+                android:paddingLeft="18dip"
+                android:onClick="onSetTime"
+                android:text="아침입력식사 알림"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:onClick="onSetTime"
+                android:id="@+id/setsecond"
+                android:text="점심입력시간 알림"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:id="@+id/setthird"
+                android:onClick="onSetTime"
+                android:text="저녁입력시간 알림"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/setup"
+                android:text="변경"
+                android:onClick="onClickChange"/>
+
+
+        </LinearLayout>
+
+</FrameLayout>
+
+</LinearLayout>
+
+
+
+

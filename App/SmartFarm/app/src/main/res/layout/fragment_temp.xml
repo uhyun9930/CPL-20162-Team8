@@ -1,0 +1,36 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.and.drawer.Temp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chartTemp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonTemp"
+            android:text="날짜확인"
+            android:onClick="onClick"/>
+        <ListView
+            android:id="@+id/android:list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/android:empty"
+            android:text="데이터가 없습니다"
+            android:textSize="20dp"
+            android:gravity="center"/>
+    </LinearLayout>
+</FrameLayout>

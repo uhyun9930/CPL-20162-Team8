@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:drawableTop="@drawable/checked3"
+             android:text="일"
+
+            android:paddingLeft="10dp"
+            android:id="@+id/button7" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:paddingLeft="10dp"
+            android:drawableTop="@drawable/checked3"
+            android:text="월"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/button8" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+
+            android:paddingLeft="10dp"
+            android:background="#ffffff"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/checked3"
+            android:text="화"
+            android:id="@+id/button9" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:paddingLeft="10dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/checked3"
+            android:text="수"
+            android:id="@+id/button10" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:paddingLeft="10dp"
+            android:drawableTop="@drawable/checked3"
+            android:text="목"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/button11" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:paddingLeft="10dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/checked3"
+            android:text="금"
+            android:id="@+id/button12" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:paddingLeft="10dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/checked3"
+            android:text="토"
+            android:id="@+id/button13" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button14" />
+    </LinearLayout>
+
+</LinearLayout>
