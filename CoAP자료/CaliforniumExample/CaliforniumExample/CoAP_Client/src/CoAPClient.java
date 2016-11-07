@@ -60,9 +60,9 @@ public class CoAPClient {
 	public static void printResponse(CoapResponse response) {
 		if (response != null) {
 
-//			System.out.println(response.getCode());
-//			System.out.println(response.getOptions());
-//			System.out.println(response.getResponseText());
+			System.out.println(response.getCode());
+			System.out.println(response.getOptions());
+			System.out.println(response.getResponseText());
 
 			// access advanced API with access to more details through
 			// .advanced()

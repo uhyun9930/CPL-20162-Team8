@@ -19,7 +19,6 @@ public class CoAPServer extends CoapServer {
 //    private static final int COAP_PORT = NetworkConfig.getStandard().getInt(NetworkConfig.Keys.COAP_PORT);
 	private static final int COAP_PORT = 9999;
 	private static ConnectionDB connectionDB; 
-	static boolean stop = false;
 	
     /*
      * Application entry point.
@@ -59,11 +58,9 @@ public class CoAPServer extends CoapServer {
      */
     public CoAPServer() throws SocketException {
         
-        // provide an instance of a Hello-World resource
-    	while(stop == true)
-    	{
-    		add(new HelloWorldResource("smartfarm"));
-    	}
+        // provide an instance of a Hello-World resource  	
+    	add(new HelloWorldResource("smartfarm"));
+  
     }
     /*
      * Definition of the Hello-World Resource
@@ -136,7 +133,7 @@ class ConnectionDB
 		try{
 			String jdbcUrl="jdbc:mysql://localhost:3306/farm_db";
 			String userId = "root";
-			String userPass = "zotnl39a";
+			String userPass = "autoset";
 			
 			connection = DriverManager.getConnection(jdbcUrl, userId, userPass);
 			
@@ -159,8 +156,6 @@ class ConnectionDB
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		if(values[0] == "ok")
-			CoAPServer.stop =true;
 		sql = "REPLACE INTO farm values (" + Integer.parseInt(values[0]) + ", '" + values[1] + "', " + Integer.parseInt(values[2]) + ", " +
 				Integer.parseInt(values[3]) + ", " + Integer.parseInt(values[4]) + ", '" + values[5]+ "');";
 		
