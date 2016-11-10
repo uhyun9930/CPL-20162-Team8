@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style>
+#wrap {width:502px; margin:0 auto;}
+#wrap #scroll {width:500px; height:400px; position:relative; overflow:hidden; border:1px solid #ccc; clear:both;}
+#wrap #scroll  .box {width:3500px; overflow:hidden;}
+#wrap #scroll  .snap {width:500px; height:400px; float:left; background:#ccc; color:#333;}
+#wrap ul.list {padding:10px 0 20px 0; margin:0; clear:both; overflow:hidden;}
+#wrap ul.list li {float:left; list-style:none; width:50px; text-align:center; padding:3px 0 5px 0; margin:0; cursor:pointer;}
+#wrap ul.list li.on {border-bottom:5px solid #ff5500;}
+</style>
+<script src="jquery.js"></script>
+<script src="iscroll.js"></script>
+<script>
+$(function(){
+	var con_scroll = new iScroll('scroll', {
+		snap: true,
+		momentum: false,
+		hScrollbar: false,
+		vScrollbar: false,
+		onScrollEnd: function() {
+			$('.list li').each(function(i, node) {
+				if(i === con_scroll.currPageX) {
+					$(node).addClass('on');
+				} else {
+					$(node).removeClass('on');
+				}
+			});
+		}
+	});
+	$(".list li").click(function(){
+		con_scroll.scrollToPage($(this).index());
+		$('.list li').each(function(i, node) {
+			if(i === con_scroll.currPageX) {
+				$(node).addClass('on');
+			} else {
+				$(node).removeClass('on');
+			}
+		});
+	});
+});
+</script>
+<body>
+<div id="wrap">
+	<ul class="list">
+		<li class="on">홈</li>
+		<li>정치</li>
+		<li>경제</li>
+		<li>연예</li>
+		<li>사회</li>
+		<li>생활</li>
+		<li>IT</li>
+	</ul>
+	<div id="scroll">
+		<div class="box">
+			<div class="snap">홈 내용</div>
+			<div class="snap">정치 내용</div>
+			<div class="snap">경제 내용</div>
+			<div class="snap">연예 내용</div>
+			<div class="snap">사회 내용</div>
+			<div class="snap">생활 내용</div>
+			<div class="snap">IT 내용</div>
+		</div>
+	</div>	
+</div>
+</body>
+</html>

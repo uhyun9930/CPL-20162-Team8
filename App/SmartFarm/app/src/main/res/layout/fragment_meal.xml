@@ -1,0 +1,155 @@
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.and.drawer.Meal">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+
+        tools:context="com.example.and.termproject.Meal"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:paddingTop="15dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#00ff0000"
+                android:paddingLeft="10dp"
+                android:drawableTop="@drawable/checked3"
+                android:text="월"
+                android:layout_height="wrap_content"
+                android:id="@+id/mon" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:paddingLeft="10dp"
+                android:drawableTop="@drawable/checked3"
+                android:text="화"
+                android:id="@+id/thu" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:paddingLeft="10dp"
+                android:drawableTop="@drawable/checked3"
+                android:text="수"
+                android:id="@+id/wen" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:paddingLeft="10dp"
+                android:drawableTop="@drawable/checked3"
+                android:text="목"
+                android:id="@+id/thur" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:paddingLeft="10dp"
+                android:drawableTop="@drawable/checked3"
+                android:text="금"
+                android:id="@+id/fri" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:paddingLeft="10dp"
+                android:drawableTop="@drawable/checked3"
+                android:text="토"
+                android:id="@+id/sat" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:paddingLeft="10dp"
+                android:drawableTop="@drawable/checked3"
+                android:text="일"
+                android:id="@+id/sun" />
+        </LinearLayout>/
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+
+
+            <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="#ffffff"
+                android:text="식사를 기록하세요"
+                android:drawablePadding="2dp"
+                android:drawableRight="@drawable/cupcake3"
+                android:layout_margin="10dp"
+                        android:id="@+id/second"
+                        android:onClick="onClickButton"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ffffff"
+                android:text="걸음수"
+                android:id="@+id/walk"
+                android:layout_margin="10dp"
+                android:drawableRight="@drawable/walk2"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ffffff"
+                android:layout_margin="10dp"
+                android:id="@+id/plus"
+                android:text="추가"
+                android:drawableRight="@drawable/plus"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="#ffffff"
+                android:text="날짜 확인"
+                android:drawableRight="@drawable/calendar2"
+                android:id="@+id/date"
+                android:onClick="onClickButton"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>
