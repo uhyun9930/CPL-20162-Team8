@@ -30,6 +30,7 @@ public class MainActivity extends Activity {
    // String color = "#000000";
    String color = "#0054FF";
     static int count=0;
+    static int count1=0;
     /**
      * 일 저장 할 리스트
      */
@@ -52,12 +53,15 @@ public class MainActivity extends Activity {
         long now = System.currentTimeMillis();
         final Date date = new Date(now);
         //연,월,일을 따로 저장
-
+        int a=0;
+        String b;
         final SimpleDateFormat curYearFormat = new SimpleDateFormat("yyyy", Locale.KOREA);
         final SimpleDateFormat curMonthFormat = new SimpleDateFormat("MM", Locale.KOREA);
         final SimpleDateFormat curDayFormat = new SimpleDateFormat("dd", Locale.KOREA);
 
         //현재 날짜 텍스트뷰에 뿌려줌
+        //a = Integer.parseInt(curMonthFormat.format(date))-1;
+        //b= String.valueOf(a);
 
         tvDate.setText(curYearFormat.format(date) + "/" + curMonthFormat.format(date));
 
@@ -74,7 +78,9 @@ public class MainActivity extends Activity {
 
         mCal = Calendar.getInstance();
         //이번달 1일 무슨요일인지 판단 mCal.set(Year,Month,Day)
+       // mCal.set(Integer.parseInt(curYearFormat.format(date)), Integer.parseInt(curMonthFormat.format(date)) - 1, 1);
         mCal.set(Integer.parseInt(curYearFormat.format(date)), Integer.parseInt(curMonthFormat.format(date)) - 1, 1);
+
         int dayNum = mCal.get(Calendar.DAY_OF_WEEK);
         //1일 - 요일 매칭 시키기 위해 공백 add
         for (int i = 1; i < dayNum; i++) {
@@ -164,10 +170,89 @@ public class MainActivity extends Activity {
 
     public void onLastMonth(View v){
         count++;
-        Calendar cal= Calendar.getInstance();
-        cal.add(Calendar.MONTH, -count); // +1은 다음달
-        SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
-        Log.i("kwon","lastmonth print : "+ date.format(cal.getTime()));
+        long now1 = System.currentTimeMillis();
+        final Date date1 = new Date(now1);
+        //연,월,일을 따로 저장
+        int c=0;
+        String d;
+        final SimpleDateFormat curYearFormat = new SimpleDateFormat("yyyy", Locale.KOREA);
+        final SimpleDateFormat curMonthFormat = new SimpleDateFormat("MM", Locale.KOREA);
+        final SimpleDateFormat curDayFormat = new SimpleDateFormat("dd", Locale.KOREA);
+
+        //현재 날짜 텍스트뷰에 뿌려줌
+        c = Integer.parseInt(curMonthFormat.format(date1))-count;
+        d= String.valueOf(c);
+
+        tvDate.setText(curYearFormat.format(date1) + "/" + d);
+
+        //gridview 요일 표시
+        dayList = new ArrayList<String>();
+        dayList.add("일");
+        dayList.add("월");
+        dayList.add("화");
+        dayList.add("수");
+        dayList.add("목");
+        dayList.add("금");
+        dayList.add("토");
+
+
+        mCal = Calendar.getInstance();
+        //이번달 1일 무슨요일인지 판단 mCal.set(Year,Month,Day)
+        // mCal.set(Integer.parseInt(curYearFormat.format(date)), Integer.parseInt(curMonthFormat.format(date)) - 1, 1);
+        mCal.set(Integer.parseInt(curYearFormat.format(date1)), Integer.parseInt(d) - 1, 1);
+
+        int dayNum = mCal.get(Calendar.DAY_OF_WEEK);
+        //1일 - 요일 매칭 시키기 위해 공백 add
+        for (int i = 1; i < dayNum; i++) {
+            dayList.add("");
+        }
+        setCalendarDate(mCal.get(Calendar.MONTH) + 1);
+        gridAdapter = new GridAdapter(getApplicationContext(), dayList);
+        gridView.setAdapter(gridAdapter);
+
+    }
+    public void onNextMonth(View v){
+        count1++;
+        long now1 = System.currentTimeMillis();
+        final Date date1 = new Date(now1);
+        //연,월,일을 따로 저장
+        int a=0;
+        String b;
+        final SimpleDateFormat curYearFormat = new SimpleDateFormat("yyyy", Locale.KOREA);
+        final SimpleDateFormat curMonthFormat = new SimpleDateFormat("MM", Locale.KOREA);
+        final SimpleDateFormat curDayFormat = new SimpleDateFormat("dd", Locale.KOREA);
+
+        //현재 날짜 텍스트뷰에 뿌려줌
+        a = Integer.parseInt(curMonthFormat.format(date1))-count+count1;
+        b= String.valueOf(a);
+
+        tvDate.setText(curYearFormat.format(date1) + "/" + b);
+
+        //gridview 요일 표시
+        dayList = new ArrayList<String>();
+        dayList.add("일");
+        dayList.add("월");
+        dayList.add("화");
+        dayList.add("수");
+        dayList.add("목");
+        dayList.add("금");
+        dayList.add("토");
+
+
+        mCal = Calendar.getInstance();
+        //이번달 1일 무슨요일인지 판단 mCal.set(Year,Month,Day)
+        // mCal.set(Integer.parseInt(curYearFormat.format(date)), Integer.parseInt(curMonthFormat.format(date)) - 1, 1);
+        mCal.set(Integer.parseInt(curYearFormat.format(date1)), Integer.parseInt(b) - 1, 1);
+
+        int dayNum = mCal.get(Calendar.DAY_OF_WEEK);
+        //1일 - 요일 매칭 시키기 위해 공백 add
+        for (int i = 1; i < dayNum; i++) {
+            dayList.add("");
+        }
+        setCalendarDate(mCal.get(Calendar.MONTH) + 1);
+        gridAdapter = new GridAdapter(getApplicationContext(), dayList);
+        gridView.setAdapter(gridAdapter);
+
     }
 
     private class ViewHolder {
@@ -178,6 +263,7 @@ public class MainActivity extends Activity {
     {
         super.onDestroy();
         count=0;
+        count1=0;
     }
 
 }
