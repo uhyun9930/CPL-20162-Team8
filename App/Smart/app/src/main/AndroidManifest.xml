@@ -22,7 +22,11 @@
             android:name=".Graph"
             android:label="@string/title_activity_graph"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Camera"></activity>
+        <activity android:name=".Camera" />
+        <activity android:name=".NoticeMenu" />
+        <activity android:name=".Profile" />
+        <activity android:name=".Schedule" />
+        <activity android:name=".Notice"></activity>
     </application>
 
 </manifest>
