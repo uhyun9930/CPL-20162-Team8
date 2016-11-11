@@ -7,32 +7,34 @@
     android:background="@drawable/joinback"
     tools:context="com.example.and.smartapp.Join">
 
-
             <EditText
                 android:layout_marginTop="230dp"
                 android:layout_width="350dp"
                 android:layout_gravity="center"
-                android:background="@drawable/editemail"
                 android:layout_height="50dp"
-                android:onClick="onEmailClick"
-                android:id="@+id/Email" />
+                android:hint = "E-mail"
+                android:id="@+id/Join_editTextEmail"
+                android:inputType="textEmailAddress"
+                />
 
 
             <EditText
                 android:layout_width="350dp"
                 android:layout_height="50dp"
+                android:hint="Password"
                 android:layout_gravity="center"
-                android:onClick="onPwdClick"
-                android:background="@drawable/editpwd"
-                android:id="@+id/Pwd" />
+                android:id="@+id/Join_editTextPassword"
+                android:inputType="textPassword"
+                android:maxLength="16"/>
 
             <EditText
                 android:layout_width="350dp"
                 android:layout_height="50dp"
+                android:hint="Repeat Password"
                 android:layout_gravity="center"
-                android:onClick="onRePwdClick"
-                android:background="@drawable/repeatpwd"
-                android:id="@+id/RePwd" />
+                android:id="@+id/Join_editTextCheckPassword"
+                android:inputType="textPassword"
+                android:maxLength="16"/>
 
 
     <Button
@@ -40,9 +42,8 @@
         android:layout_width="350dp"
         android:layout_gravity="center"
         android:layout_height="50dp"
-
         android:background="@drawable/join"
-        android:onClick="BackLogin"
-        android:id="@+id/BackLogin" />
+        android:onClick="invokeJoin"
+        android:id="@+id/Join" />
 
 </LinearLayout>

@@ -9,38 +9,29 @@
 
     <EditText
         android:layout_marginTop="230dp"
-        android:background="@drawable/editemail"
+        android:hint = "E-mail"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:id="@+id/loginEmail"
-        android:onClick="onLoginEmail"/>
+        android:id="@+id/Login_editTextEmail"
+        android:inputType="textEmailAddress"/>
 
     <EditText
         android:layout_width="350dp"
+        android:hint = "Password"
         android:layout_height="50dp"
-        android:background="@drawable/editpwd"
         android:layout_gravity="center"
-        android:id="@+id/loginPwd"
-        android:onClick="onLoginPwd"/>
+        android:id="@+id/Login_editTextPassword"
+        android:inputType="textPassword"/>
 
     <Button
         android:layout_width="350dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:onClick="onLogin"
+        android:onClick="invokeLogin"
         android:background="@drawable/start"
         android:id="@+id/button" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Forgot Password?"
-        android:paddingTop="10dp"
-        android:gravity="right"
-        android:onClick="onForgot"
-        android:id="@+id/textView" />
 
     <Button
         android:layout_width="350dp"
