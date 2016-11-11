@@ -41,5 +41,9 @@ public class Menu extends AppCompatActivity {
         Intent in = new Intent(Menu.this,Camera.class);
         startActivity(in);
     }
+    public void onSetting(View v){
+        Intent j = new Intent(Menu.this,NoticeMenu.class);
+        startActivity(j);
+    }
 
 }
