@@ -151,7 +151,7 @@ public class MainActivity extends Activity {
                                     public void onClick(DialogInterface dialog, int which) {
                                             Toast.makeText(getApplicationContext(),"메모입력",Toast.LENGTH_SHORT).show();
                                             check.setText("O");
-                                        
+
                                     }
                                 })
                         .create().show();
