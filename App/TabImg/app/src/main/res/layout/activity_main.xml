@@ -21,27 +21,6 @@
                 android:layout_height="match_parent"
                 android:id="@android:id/tabcontent"
                 android:padding="5dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tv1"
-                    android:text="tab1"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tv2"
-                    android:text="tab2"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tv3"
-                    android:text="tab3"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tv4"
-                    android:text="tab4"/>
             </FrameLayout>
         </TabWidget>
     </LinearLayout>
