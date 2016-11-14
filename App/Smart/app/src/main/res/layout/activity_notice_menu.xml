@@ -6,22 +6,28 @@
     android:orientation="vertical"
     android:background="@drawable/back"
     tools:context="com.example.and.smartapp.NoticeMenu">
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="내 정보 관리"
+        android:src="@drawable/profile"
         android:onClick="onPro"
         android:layout_weight="1"/>
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="일정관리"
+        android:src="@drawable/sch"
         android:onClick="onSch"
         android:layout_weight="1"/>
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="알림 관리"
+        android:src="@drawable/notice"
         android:onClick="onNot"
         android:layout_weight="1"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/logout"
+        android:onClick="onLogout"/>
 </LinearLayout>

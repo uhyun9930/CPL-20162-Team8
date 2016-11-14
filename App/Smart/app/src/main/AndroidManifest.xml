@@ -10,7 +10,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,21 +19,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Login"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Join"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Menu"
-            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name=".Graph"
-            android:label="@string/title_activity_graph"
+            android:name=".Login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Join"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Menu"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Camera" />
         <activity android:name=".NoticeMenu" />
         <activity android:name=".Profile" />
         <activity android:name=".Schedule" />
-        <activity android:name=".Notice"></activity>
+        <activity android:name=".Notice" />
+        <activity android:name=".Graph" />
+        <activity android:name=".Temp" />
+        <activity android:name=".Moi" />
+        <activity android:name=".Light" />
+        <activity android:name=".Soil"></activity>
     </application>
 
 </manifest>

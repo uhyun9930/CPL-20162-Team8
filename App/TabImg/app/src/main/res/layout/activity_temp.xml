@@ -3,10 +3,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   android:orientation="vertical"
-    tools:context="com.example.and.tabimg.Temp">
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="온도 화면"/>
+    android:orientation="vertical"
+    android:background="@drawable/back"
+    tools:context="com.example.and.tabimg.Light">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        />
+    <Button
+        android:layout_width="350dp"
+        android:layout_gravity="center"
+        android:background="@drawable/right"
+        android:layout_height="50dp"
+        android:id="@+id/FindByDate"
+        />
+    <Button
+        android:layout_marginTop="5dp"
+        android:layout_width="350dp"
+        android:layout_gravity="center"
+        android:background="@drawable/righttemp"
+        android:layout_height="50dp"
+        android:id="@+id/RightLight"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="우리 농장의 적정 온도는        입니다"
+        android:id="@+id/RightText"
+        android:textSize="20dp"/>
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:text="현재 온도와      도 차입니다"
+        android:id="@+id/ByTempText"/>
 </LinearLayout>
