@@ -4,12 +4,9 @@
 #include <Wire.h>
 #include <BH1750.h>
 
-BH1750 lightMeter;
+#define DHTPIN D2
+#define DHTTYPE DHT11 
 
-const int AirValue = 520;   //you need to replace this value with Value_1
-const int WaterValue = 260;  //you need to replace this value with Value_2
-int intervals = (AirValue - WaterValue)/3;   
-int soilMoistureValue = 0;
 
 // replace with your channel’s thingspeak API key and your SSID and password
 String apiKey = "1V4RPTI017VCYSDJ";
@@ -17,17 +14,18 @@ const char* ssid = "DILAB_615";
 const char* password = "dilab5541";
 const char* server = "api.thingspeak.com";
  
-#define DHTPIN D2
-#define DHTTYPE DHT11 
  
 DHT dht(DHTPIN, DHTTYPE);
 WiFiClient client;
  
+BH1750 lightMeter;
+
 void setup() 
 {
-Serial.begin(115200);
-  lightMeter.begin();
-  Serial.println("Running...");
+Serial.begin(9600);
+lightMeter.begin();
+Serial.println(F("BH1750 Test"));
+Serial.println("Running...");
 delay(10);
 dht.begin();
  
@@ -52,14 +50,19 @@ Serial.println("WiFi connected");
 }
 void loop() 
 {
- 
+
+int soilMoistureValue = 0;
+
 float h = dht.readHumidity();
 float t = dht.readTemperature();
 
-  uint16_t lux = lightMeter.readLightLevel();
-  
+uint16_t lux = lightMeter.readLightLevel();
+ Serial.print("Light: ");
+  Serial.print(lux);
+  Serial.println(" lx");
+   
 soilMoistureValue = analogRead(A0);  
-
+Serial.println(soilMoistureValue);
 if (isnan(h) || isnan(t)) 
 {
 Serial.println("Failed to read from DHT sensor!");
@@ -95,20 +98,12 @@ Serial.println(h);
   Serial.print("Light: ");
   Serial.print(lux);
   Serial.println(" lx");
-  if(soilMoistureValue > WaterValue && soilMoistureValue < (WaterValue + intervals))
-{
-  Serial.println("Very Wet");
-}
-else if(soilMoistureValue > (WaterValue + intervals) && soilMoistureValue < (AirValue - intervals))
-{
-  Serial.println("Wet");
-}
-else if(soilMoistureValue < AirValue && soilMoistureValue > (AirValue - intervals))
-{
-  Serial.println("Dry");
-}
+Serial.print("soilMoisture: ");
+Serial.println(soilMoistureValue);
+
 Serial.println("Sending data to Thingspeak");
 }
+
 client.stop();
  
 Serial.println("Waiting 20 secs");
