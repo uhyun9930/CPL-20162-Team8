@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/joinback"
+    tools:context="com.example.and.smartapp.Join">
+
+            <EditText
+                android:layout_marginTop="230dp"
+                android:layout_width="350dp"
+                android:layout_gravity="center"
+                android:layout_height="50dp"
+                android:hint = "E-mail"
+                android:id="@+id/Join_editTextEmail"
+                android:inputType="textEmailAddress"
+                />
+
+
+            <EditText
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:hint="Password"
+                android:layout_gravity="center"
+                android:id="@+id/Join_editTextPassword"
+                android:inputType="textPassword"
+                android:maxLength="16"/>
+
+            <EditText
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:hint="Repeat Password"
+                android:layout_gravity="center"
+                android:id="@+id/Join_editTextCheckPassword"
+                android:inputType="textPassword"
+                android:maxLength="16"/>
+
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_width="350dp"
+        android:layout_gravity="center"
+        android:layout_height="50dp"
+        android:background="@drawable/join"
+        android:onClick="invokeJoin"
+        android:id="@+id/Join" />
+
+</LinearLayout>
