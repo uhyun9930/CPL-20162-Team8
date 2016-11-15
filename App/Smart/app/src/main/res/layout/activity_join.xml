@@ -45,5 +45,4 @@
         android:background="@drawable/join"
         android:onClick="invokeJoin"
         android:id="@+id/Join" />
-
 </LinearLayout>
