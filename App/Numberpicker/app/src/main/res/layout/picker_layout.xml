@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="?android:attr/buttonBarStyle"
+    >
+
+    <NumberPicker
+        android:id="@+id/numberPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="64dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/setBtn"
+        android:layout_width="wrap_content"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/CancelButton_NumberPicker"
+        android:layout_alignBottom="@+id/CancelButton_NumberPicker"
+        android:layout_marginRight="16dp"
+        android:layout_toRightOf="@+id/numberPicker"
+        android:text="Set" />
+
+    <Button
+        android:id="@+id/CancelButton_NumberPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_below="@+id/numberPicker"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="98dp"
+        android:layout_toLeftOf="@+id/numberPicker"
+        android:text="Cancel" />
+
+
+</RelativeLayout>
