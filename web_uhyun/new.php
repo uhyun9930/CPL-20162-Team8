@@ -23,11 +23,13 @@
 </a>
 <nav class="w-nav-menu" role="navigation">
 <a class="link w-nav-link" href="#">홈</a>
-<a class="link w-nav-link" href="#">그래프 확인</a>
-<a class="link w-nav-link" href="#">식물 종류</a>
+<a class="link w-nav-link" href="http://155.230.158.166:8080/html">카메라</a>
+<a class="link w-nav-link" href="https://thingspeak.com/channels/180046">그래프 확인</a>
 <a class="link w-nav-link" href="#">날씨 확인</a>
 <a class="link w-nav-link" href="#">달력 체크</a>
 </nav>
+
+
 
 <div class="w-nav-button">
 <div class="w-icon-nav-menu"></div>
@@ -37,6 +39,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript">
 </script> 
  <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]--> 
+<div class="w-tab-pane" data-w-tab="Tab 5">
+<script src="http://155.230.158.166:8080/html" type="text/javascript"></script>
+
+
  </body>
  </html> 
 

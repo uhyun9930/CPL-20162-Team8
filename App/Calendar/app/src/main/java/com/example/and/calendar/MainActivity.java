@@ -133,10 +133,10 @@ public class MainActivity extends Activity {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                             Toast.makeText(getApplicationContext(),"메모입력",Toast.LENGTH_SHORT).show();
-                                            check.setTextColor(Color.parseColor(color1));
+                                           // check.setTextColor(Color.parseColor(color1));
                                             //count = 777;
                                         gridAdapter.notifyDataSetChanged();
-
+                                        memo.setText(name.getText().toString());
                                     }
                                 }).setNegativeButton("취소",
                         new DialogInterface.OnClickListener() {
