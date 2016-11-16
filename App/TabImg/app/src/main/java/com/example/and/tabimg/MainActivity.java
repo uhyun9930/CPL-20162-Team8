@@ -10,6 +10,10 @@ import android.widget.TabHost;
 
 public class MainActivity extends TabActivity {
 
+    static int tempcount=0;
+    static int moicount=0;
+    static int lightcount=0;
+    static int soilcount=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +29,6 @@ public class MainActivity extends TabActivity {
        // spec = mTab.newTabSpec("tab1").setIndicator("First Tab")
         intent = new Intent(this,Temp.class);
         spec = mTab.newTabSpec("tab1").setIndicator("").setContent(intent);
-
         mTab.addTab(spec);
 
         Intent intent1 = new Intent(this,Moi.class);
@@ -43,16 +46,16 @@ public class MainActivity extends TabActivity {
         for(int i = 0; i < mTab.getTabWidget().getChildCount(); i++) {
             switch(i){   // 각 탭에 자신의 이미지를 추가 한다.
                 case 0 :
-                    mTab.getTabWidget().getChildAt(i).setBackgroundDrawable(getResources().getDrawable(R.drawable.temp));
+                    mTab.getTabWidget().getChildAt(i).setBackgroundDrawable(getResources().getDrawable(R.drawable.selector_tab_click));
                     break;
                 case 1 :
-                    mTab.getTabWidget().getChildAt(i).setBackgroundDrawable(getResources().getDrawable(R.drawable.moi));
+                    mTab.getTabWidget().getChildAt(i).setBackgroundDrawable(getResources().getDrawable(R.drawable.selector_moi_click));
                     break;
                 case 2 :
-                    mTab.getTabWidget().getChildAt(i).setBackgroundDrawable(getResources().getDrawable(R.drawable.light));
+                    mTab.getTabWidget().getChildAt(i).setBackgroundDrawable(getResources().getDrawable(R.drawable.selector_light_click));
                     break;
                 case 3 :
-                    mTab.getTabWidget().getChildAt(i).setBackgroundDrawable(getResources().getDrawable(R.drawable.soil));
+                    mTab.getTabWidget().getChildAt(i).setBackgroundDrawable(getResources().getDrawable(R.drawable.selector_soil_click));
                     break;
             }
         }

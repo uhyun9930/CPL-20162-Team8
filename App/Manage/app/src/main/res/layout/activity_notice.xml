@@ -4,30 +4,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/alarmback"
     tools:context="com.example.and.manage.Notice">
 
-    <Button
+    <TableLayout
+        android:layout_marginTop="120dp"
+        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="온도 알림"
-        android:id="@+id/noticeTemp"
-        android:onClick="onTempNotice"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="습도 알림"
-        android:id="@+id/noticeMoi"
-        android:onClick="onMoiNotice"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="조도 알림"
-        android:id="@+id/noticeLig"
-        android:onClick="onLigNotice"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="토양습도 알림"
-        android:id="@+id/noticeSoil"
-        android:onClick="onSoilNotice"/>
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/tembtn"
+                android:layout_weight="1"
+                android:layout_margin="25dp"
+                android:id="@+id/noticeTemp"
+                android:onClick="onTempNotice"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/lightbtn"
+                android:layout_weight="1"
+                android:id="@+id/noticeLig"
+                android:layout_margin="25dp"
+                android:onClick="onLigNotice"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/moibtn"
+                android:layout_weight="1"
+                android:layout_margin="25dp"
+                android:id="@+id/noticeMoi"
+                android:onClick="onMoiNotice"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/noticeSoil"
+                android:background="@drawable/soilbtn"
+                android:onClick="onSoilNotice"/>
+        </TableRow>
+    </TableLayout>
 </LinearLayout>
