@@ -8,36 +8,38 @@
     tools:context="com.example.and.tabimg.Light">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="0dp"
+        android:layout_weight="5"
         />
-    <Button
-        android:layout_width="350dp"
-        android:layout_gravity="center"
-        android:background="@drawable/right"
-        android:layout_height="50dp"
-        android:id="@+id/FindByDate"
-        />
-    <Button
-        android:layout_marginTop="5dp"
-        android:layout_width="350dp"
-        android:layout_gravity="center"
-        android:background="@drawable/righttemp"
-        android:layout_height="50dp"
-        android:id="@+id/RightLight"/>
+            <Button
+                android:layout_width="350dp"
+                android:background="@drawable/graph_date"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:onClick="onFindDate"
+                android:id="@+id/FindByDate"/>
+            <Button
+                android:layout_width="350dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/graph_temp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onRightTemp"
+                android:id="@+id/RightTemp"/>
+
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="30dp"
-        android:text="우리 농장의 적정 온도는        입니다"
-        android:id="@+id/RightText"
-        android:textSize="20dp"/>
-    <TextView
-        android:layout_marginTop="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:text="현재 온도와      도 차입니다"
-        android:id="@+id/ByTempText"/>
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:id="@+id/text"
+        android:layout_margin="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="25dp"
+        android:layout_gravity="center"
+        android:gravity="center"/>
 </LinearLayout>

@@ -15,9 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Calendar" />
+        <activity android:name=".Calendar"
+            android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".Profile" />
         <activity android:name=".Notice" />
+        <activity android:name=".ExToday"/>
+        <activity android:name=".Detail"/>
         <activity android:name=".Logout"></activity>
     </application>
 

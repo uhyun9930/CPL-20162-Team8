@@ -28,19 +28,19 @@ public class MainActivity extends TabActivity {
 
        // spec = mTab.newTabSpec("tab1").setIndicator("First Tab")
         intent = new Intent(this,Temp.class);
-        spec = mTab.newTabSpec("tab1").setIndicator("").setContent(intent);
+        spec = mTab.newTabSpec("tab1").setIndicator("").setContent(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
         mTab.addTab(spec);
 
         Intent intent1 = new Intent(this,Moi.class);
-        spec = mTab.newTabSpec("tab2").setIndicator("").setContent(intent1);
+        spec = mTab.newTabSpec("tab2").setIndicator("").setContent(intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
         mTab.addTab(spec);
 
         Intent intent2 = new Intent(this,Light.class);
-        spec = mTab.newTabSpec("tab3").setIndicator("").setContent(intent2);
+        spec = mTab.newTabSpec("tab3").setIndicator("").setContent(intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
         mTab.addTab(spec);
 
         Intent intent3 = new Intent(this,Soil.class);
-        spec = mTab.newTabSpec("tab4").setIndicator("").setContent(intent3);
+        spec = mTab.newTabSpec("tab4").setIndicator("").setContent(intent3.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
         mTab.addTab(spec);
 
         for(int i = 0; i < mTab.getTabWidget().getChildCount(); i++) {
