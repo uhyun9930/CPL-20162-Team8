@@ -1,0 +1,71 @@
+<LinearLayout android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/item_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="65dp"
+        android:layout_height="0dp"
+        android:textColor = "#fff"
+        android:layout_weight="1.5"
+        android:id="@+id/date"
+        android:gravity="center|center_vertical">
+    </TextView>
+    <TextView
+        android:layout_width="65dp"
+        android:layout_height="0dp"
+        android:textColor = "#fff"
+        android:layout_weight="1.5"
+        android:id="@+id/time"
+        android:gravity="center|center_vertical">
+    </TextView>
+    <TextView
+        android:layout_width="65dp"
+        android:layout_height="0dp"
+        android:textColor = "#fff"
+        android:layout_weight="3"
+        android:id="@+id/weather"
+        android:gravity="center|center_vertical">
+    </TextView>
+    <TextView
+        android:layout_width="65dp"
+        android:layout_height="0dp"
+        android:textColor="@android:color/holo_orange_light"
+        android:layout_weight="1"
+        android:id="@+id/pop"
+        android:gravity="center|center_vertical">
+    </TextView>
+
+    <TextView
+        android:layout_width="65dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textColor = "#fff"
+        android:id="@+id/r6"
+        android:gravity="center|center_vertical">
+    </TextView>
+    <TextView
+        android:layout_width="65dp"
+        android:layout_height="0dp"
+        android:textColor = "#fff"
+        android:layout_weight="1"
+        android:id="@+id/reh"
+        android:gravity="center|center_vertical">
+    </TextView>
+    <TextView
+        android:layout_width="65dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textColor = "#fff"
+        android:id="@+id/ws"
+        android:gravity="center|center_vertical">
+    </TextView>
+    <TextView
+        android:layout_width="65dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textColor = "#fff"
+        android:id="@+id/wd"
+        android:gravity="center|center_vertical">
+    </TextView>
+</LinearLayout>

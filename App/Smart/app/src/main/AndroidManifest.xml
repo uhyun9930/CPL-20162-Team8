@@ -2,11 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.and.smartapp">
 
+    <uses-sdk android:maxSdkVersion="24"
+        android:targetSdkVersion="22"
+        android:minSdkVersion="15"></uses-sdk>
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -28,16 +31,20 @@
         <activity
             android:name=".Menu"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Camera" />
+        <activity android:name=".Camera"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".NoticeMenu" />
         <activity android:name=".Profile" />
         <activity android:name=".Schedule" />
         <activity android:name=".Notice" />
-        <activity android:name=".Graph" />
+        <activity android:name=".Graph"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".Temp" />
         <activity android:name=".Moi" />
         <activity android:name=".Light" />
-        <activity android:name=".Soil"></activity>
+        <activity android:name=".Soil" />
+        <activity android:name=".Weather"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

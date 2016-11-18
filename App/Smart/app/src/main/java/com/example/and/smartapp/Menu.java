@@ -33,6 +33,11 @@ public class Menu extends AppCompatActivity {
         );
         listView.setAdapter(adapName);*/
     }
+    public void onWeather(View v)
+    {
+        Intent i = new Intent(Menu.this, Weather.class);
+        startActivity(i);
+    }
     public void onGraph(View v){
         Intent i = new Intent(Menu.this,Graph.class);
         startActivity(i);
