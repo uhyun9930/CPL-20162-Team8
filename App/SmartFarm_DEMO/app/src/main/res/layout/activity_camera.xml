@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/graph_back">
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/webView" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:stretchColumns="0,1,2,3"
+        android:layout_height="0dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="2"
+                android:textColor="#000"
+                android:textSize = "20dp"
+                android:text="_월 _일 _시"
+                android:gravity="center_vertical|center"
+                android:id="@+id/TextView_camera_date_info" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize = "24dp"
+                android:text="온도"
+                android:id="@+id/textView8"
+                android:paddingLeft="70dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:textColor="#000"
+                android:textSize = "24dp"
+                android:id="@+id/TextView_camera_temp"
+                android:gravity="center_vertical|center" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:textColor="#000"
+                android:textSize = "24dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="습도"
+                android:id="@+id/textView10"
+                android:paddingLeft="70dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:textColor="#000"
+                android:textSize = "24dp"
+                android:id="@+id/TextView_camera_moi"
+                android:gravity="center_vertical|center" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:textColor="#000"
+                android:textSize = "24dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="조도"
+                android:id="@+id/textView12"
+                android:paddingLeft="70dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:textColor="#000"
+                android:textSize = "24dp"
+                android:id="@+id/TextView_camera_light"
+                android:gravity="center_vertical|center" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="토양 습도"
+                android:textColor="#000"
+                android:textSize = "24dp"
+                android:paddingLeft="70dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/TextView_camera_soil"
+                android:textColor="#000"
+                android:textSize = "24dp"
+                android:gravity="center_vertical|center" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
