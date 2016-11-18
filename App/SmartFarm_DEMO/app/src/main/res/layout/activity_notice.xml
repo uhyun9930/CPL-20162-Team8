@@ -4,26 +4,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-   >
+    android:background="@drawable/alarmback">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="온도 알림"
-        android:id="@+id/noticeTem"/>
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:background="@drawable/notice_temp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:id="@+id/noticeTemp"
+        android:onClick="onTempNotice"/>
+
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="습도 알림"
-        android:id="@+id/noticeMoi"/>
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:background="@drawable/notice_lig"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:id="@+id/noticeLig"
+        android:layout_marginTop="7dp"
+        android:onClick="onLigNotice"/>
+
+
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="조도 알림"
-        android:id="@+id/noticeLig"/>
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:background="@drawable/notice_moi"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginTop="7dp"
+        android:id="@+id/noticeMoi"
+        android:onClick="onMoiNotice"/>
     <Button
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:layout_marginTop="7dp"
+        android:id="@+id/noticeSoil"
+        android:background="@drawable/notice_soil"
+        android:onClick="onSoilNotice"/>
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="토양습도 알림"
-        android:id="@+id/noticeSoil"/>
+        android:layout_height="0dp"
+        android:layout_weight="2"/>
 </LinearLayout>

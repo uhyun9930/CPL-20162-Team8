@@ -5,7 +5,7 @@
 
     <users-sdk android:minSdkVersion="14"
         android:targetSdkVersion="22"
-        android:maxSdkVersion="25"/>
+        android:maxSdkVersion="24"/>
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -36,8 +36,6 @@
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity android:name=".NoticeMenu"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
-        <activity android:name=".Profile"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity android:name=".Schedule"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity android:name=".Notice"
@@ -51,6 +49,15 @@
         <activity android:name=".Light"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity android:name=".Soil"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".Calendar"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".Profile"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".ExToday"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name=".Detail"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity android:name=".Weather"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
