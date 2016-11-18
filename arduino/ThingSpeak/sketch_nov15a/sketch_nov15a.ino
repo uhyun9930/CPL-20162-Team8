@@ -92,7 +92,7 @@ String postStr ;
 postStr += String(t);
 postStr +=" ";
 postStr += String(lux);
-postStr +=" ";[s
+postStr +=" ";
 postStr += String(h);
 postStr +=" ";
 postStr += String(soilMoistureValue);
