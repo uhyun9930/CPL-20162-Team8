@@ -51,5 +51,5 @@ echo "</table>";
 
 
 <script>
- location.href='new_l.php';
+ location.href='N_login.php';
 </script>
