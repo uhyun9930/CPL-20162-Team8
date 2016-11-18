@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/noticeback"
+    tools:context="com.example.vrlab.smartfarm.Notice">
+
+    <Button
+        android:layout_marginTop="110dp"
+        android:layout_width="350dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        android:id="@+id/profile"
+        android:background="@drawable/profilebtn"
+        android:onClick="onProfile"
+        />
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="85dp"
+        android:layout_gravity="center"
+        android:id="@+id/notice"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/noticebtn"
+        android:onClick="onNotice"/>
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="85dp"
+        android:layout_gravity="center"
+        android:id="@+id/calendar"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/calbtn"
+        android:onClick="onCalendar"/>
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="85dp"
+        android:layout_gravity="center"
+        android:id="@+id/logout"
+        android:background="@drawable/logoutbtn"
+
+        android:onClick="onLogout"/>
+
+</LinearLayout>

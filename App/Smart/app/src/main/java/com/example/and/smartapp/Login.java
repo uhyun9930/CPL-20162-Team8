@@ -29,6 +29,8 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
+// http://155.230.86.89/smartfarm/login.php
+
 public class Login extends AppCompatActivity {
     private EditText editTextEmail;
     private EditText editTextPassword;
@@ -85,7 +87,7 @@ public class Login extends AppCompatActivity {
 
                 try{
                     HttpClient httpClient = new DefaultHttpClient();
-                    HttpPost httpPost = new HttpPost("http://155.230.86.192/smartfarm/login.php");
+                    HttpPost httpPost = new HttpPost("http://155.230.86.89/smartfarm/login.php");
                     httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 
                     HttpResponse response = httpClient.execute(httpPost);
