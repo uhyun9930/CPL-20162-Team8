@@ -37,13 +37,13 @@ public class Profile extends ListActivity {
     }
     public void loadDB(){
         SQLiteDatabase db = openOrCreateDatabase(
-                "plant.db",
+                "plant1.db",
                 SQLiteDatabase.CREATE_IF_NECESSARY,
                 null
         );
 
-        db.execSQL("CREATE TABLE IF NOT EXISTS plant (_id INTEGER PRIMARY kEY,name TEXT,date TEXT);"); //식물 이름
-        Cursor c = db.rawQuery("SELECT *FROM plant;",null);
+        db.execSQL("CREATE TABLE IF NOT EXISTS plant (_id INTEGER PRIMARY kEY,email TEXT,name TEXT,date TEXT);"); //식물 이름
+        Cursor c = db.rawQuery("SELECT name,date plant1;",null);
         startManagingCursor(c);
         ListAdapter adapt = new SimpleCursorAdapter(
                 this,
@@ -71,12 +71,14 @@ public class Profile extends ListActivity {
                 .setTitle("오늘 날짜는 "+today)
                 .setMessage("식물을 입력해주세요")
                 .setView(plant_name)
+                //insert에 email 추가해주세요
                 .setPositiveButton("입력",
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 String sql =
-                                        "INSERT INTO plant (name,date) VALUES ('"
+                                        "INSERT INTO plant1 (email,name,date) VALUES ('"
+                                               // +email+"', '"
                                         + plant_name.getText().toString() + "', '"
                                         + _today + "');";
                                 SQLiteDatabase db = openOrCreateDatabase(
@@ -93,6 +95,8 @@ public class Profile extends ListActivity {
             public void onClick(DialogInterface dialog, int which) {
                 String sql =
                         "DELETE FROM plant WHERE name = '"+plant_name.getText().toString()+"';";
+              //"DELETE FROM plant WHERE name = '"+plant_name.getText().toString()+"' AND email = '"+email+';";
+
                 SQLiteDatabase db = openOrCreateDatabase(
                         "plant.db",
                         SQLiteDatabase.CREATE_IF_NECESSARY,
