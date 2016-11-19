@@ -4,13 +4,13 @@
 #include <Wire.h>
 #include <BH1750.h>
 
-#define DHTPIN D3
+#define DHTPIN D10
 #define DHTTYPE DHT11 
 
 
 // replace with your channel’s thingspeak API key and your SSID and password
 String apiKey = "1V4RPTI017VCYSDJ";
-const char* ssid = "5541";
+const char* ssid = "DILAB_615";
 const char* password = "dilab5541";
 const char* server = "155.230.86.89";
  
@@ -92,7 +92,7 @@ String postStr ;
 postStr += String(t);
 postStr +=" ";
 postStr += String(lux);
-postStr +=" ";[s
+postStr +=" ";
 postStr += String(h);
 postStr +=" ";
 postStr += String(soilMoistureValue);
