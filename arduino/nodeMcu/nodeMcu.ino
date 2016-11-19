@@ -3,7 +3,7 @@
 
 #include <DHT.h>
 #include <BH1750.h>
-#define DHTPIN D4
+#define DHTPIN D2
 #define DHTTYPE DHT11 
 #define LED_OFF D5
 #define LED_OFF_2 LED_BUILTIN
@@ -28,7 +28,7 @@ void setup() {
   
   pinMode(LED_BUILTIN, OUTPUT);     // Initialize the LED_BUILTIN pin as an output
   pinMode(D5, OUTPUT);     // Initialize the LED_BUILTIN pin as an output
- digitalWrite(LED_BUILTIN,HIGH); 
+ digitalWrite(LED_BUILTIN,LOW); 
   digitalWrite(D5,  LOW); 
   
     Serial.begin(115200);
@@ -54,9 +54,9 @@ void setup() {
     Serial.println("Sent ip adress to server");
     
 dht.begin();
-lightMeter.begin();
+//lightMeter.begin();
 
-Serial.println(F("BH1750 Test"));
+//Serial.println(F("BH1750 Test"));
 Serial.println("Running...");
 delay(10);
 
@@ -71,7 +71,7 @@ int soilMoistureValue = 0;
 float h = dht.readHumidity();
 float t = dht.readTemperature();
 
-uint16_t lux = lightMeter.readLightLevel();
+//uint16_t lux = lightMeter.readLightLevel();
    
 soilMoistureValue = analogRead(A0);
 
@@ -85,9 +85,9 @@ Serial.print("Temperature: ");
 Serial.println(t);
 Serial.print(" degrees Celsius Humidity: ");
 Serial.println(h);
-Serial.print("Light: ");
-Serial.print(lux);
-Serial.println(" lx\nsoilMoisture: ");
+//Serial.print("Light: ");
+//Serial.print(lux);
+Serial.println("soilMoisture: ");
 Serial.println(soilMoistureValue);
 
 sprintf(s,"1 26.00 76 33.00 705");
