@@ -21,10 +21,10 @@ include("dbconnect.php");
  if($count==1)
  {
   echo "
-	.<script>document.location.href='new.php'</script>
+	.<script>document.location.href='gg.php'</script>
 
 
-     //<a href='new.php'>go</a>
+     //<a href='gg.php'>go</a>
   ";
   exit;
  }

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="@drawable/back">
+
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="180dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/temperature"
+                android:layout_weight="4"
+
+                android:gravity="center_vertical|center"
+                android:textColor="@android:color/holo_orange_light"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="65dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/textView11"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/weather"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor = "#fff"
+                android:gravity="center_vertical|center"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/pop"
+                android:layout_weight="1"
+                android:textColor = "#fff"
+                android:textStyle="bold"
+                android:gravity="center_vertical|center"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/r6"
+                android:textColor = "#fff"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center"
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topLayout">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="기온"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:textColor = "#fff"
+                android:id="@+id/text_temp"
+                android:gravity="center_vertical|center" />
+            <TextView
+                android:text="날짜"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:textColor = "#fff"
+                android:id="@+id/text_date"
+                android:gravity="center_vertical|center" />
+
+            <TextView
+                android:text="시간"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:id="@+id/text_time"
+                android:textColor = "#fff"
+                android:gravity="center_vertical|center" />
+
+            <TextView
+                android:text="날씨"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:textColor = "#fff"
+                android:layout_weight="3"
+                android:id="@+id/text_weather"
+                android:gravity="center_vertical|center" />
+
+            <TextView
+                android:text="강수확률"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textColor = "#fff"
+                android:id="@+id/text_pop"
+                android:gravity="center_vertical|center" />
+
+            <TextView
+                android:text="강수량"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:textColor = "#fff"
+                android:layout_weight="1"
+                android:id="@+id/text_r6"
+                android:gravity="center_vertical|center" />
+            <TextView
+                android:text="습도"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textColor = "#fff"
+                android:id="@+id/temt_reh"
+                android:gravity="center_vertical|center" />
+
+            <TextView
+                android:text="풍속"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textColor = "#fff"
+                android:id="@+id/text_ws"
+                android:gravity="center_vertical|center" />
+            <TextView
+                android:text="풍향"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:textColor = "#fff"
+                android:layout_weight="1"
+                android:id="@+id/text_wd"
+                android:gravity="center_vertical|center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:id="@+id/data_layout"
+            android:layout_height="match_parent"
+            android:scrollbars="horizontal">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart"
+                android:background="@null"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:layout_width="match_parent" />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="11"
+                android:id="@+id/horizontal_recycler_view"
+                android:scrollbars="horizontal">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

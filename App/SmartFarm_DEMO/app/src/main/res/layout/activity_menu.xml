@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/menu_back"
+    tools:context="com.example.vrlab.smartfarm.Menu">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/graph_btn"
+        android:layout_marginBottom="25dp"
+        android:layout_gravity="center"
+        android:onClick="onGraph"
+        android:scaleType="fitXY"
+        android:id="@+id/graph" />
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:src="@drawable/camera_btn"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="25dp"
+        android:id="@+id/camera"
+        android:onClick="onCamera"/>
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_gravity="center"
+        android:layout_height="0dp"
+        android:src="@drawable/weather_btn"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="25dp"
+        android:layout_weight="1"
+        android:id="@+id/weather"
+        android:onClick="onWeather"/>
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_marginBottom="25dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="onSetting"
+        android:layout_gravity="center"
+        android:src="@drawable/manage_btn"
+        android:scaleType="fitXY"
+        android:id="@+id/setting" />
+
+
+</LinearLayout>

@@ -34,6 +34,10 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
+
+// http://155.230.86.192/smartfarm/join.php
+// http://155.230.86.192/smartfarm/validCheck.php
 public class Join extends AppCompatActivity {
     private EditText editTextEmail;
     private EditText editTextPassword;
@@ -42,8 +46,6 @@ public class Join extends AppCompatActivity {
     String email;
     String password;
     String checkpassword;
-
-    boolean validCheck;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,8 +69,6 @@ public class Join extends AppCompatActivity {
         Pattern pattern = Pattern.compile(EmailType, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(inputStr);
 
-        validCheck = false;
-
         // email 타입 체크
         if (matcher.matches())
         {
@@ -80,12 +80,7 @@ public class Join extends AppCompatActivity {
                 // password 일치 체크
                 if(password.equals(checkpassword))
                 {
-                    ValidCheck(email); // E-mail 중복확인
-                    if(validCheck == true)
-                    {
-                        // valid input일 경우 Join
-                        join(email, password);
-                    }
+                    join(email, password);
                 }
                 else
                     Toast.makeText(getApplicationContext(), "Password를 확인하세요.", Toast.LENGTH_LONG).show();
@@ -94,6 +89,7 @@ public class Join extends AppCompatActivity {
         else
             Toast.makeText(getApplicationContext(),"올바른 E-mail 주소를 입력하세요.", Toast.LENGTH_LONG).show();
     }
+
     // DB에 추가
     private void join(final String email, String password) {
 
@@ -103,7 +99,6 @@ public class Join extends AppCompatActivity {
             protected void onPreExecute() {
                 super.onPreExecute();
             }
-
             @Override
             protected String doInBackground(String... params) {
                 String email = params[0];
@@ -117,7 +112,7 @@ public class Join extends AppCompatActivity {
 
                 try{
                     HttpClient httpClient = new DefaultHttpClient();
-                    HttpPost httpPost = new HttpPost("http://155.230.86.192/smartfarm/join.php");
+                    HttpPost httpPost = new HttpPost("http://155.230.86.89/smartfarm/join.php");
                     httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 
                     HttpResponse response = httpClient.execute(httpPost);
@@ -144,7 +139,6 @@ public class Join extends AppCompatActivity {
                 }
                 return result;
             }
-
 
             @Override
             protected void onPostExecute(String result){
@@ -153,73 +147,11 @@ public class Join extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "축하합니다! 가입되었습니다.", Toast.LENGTH_LONG).show();
                     finish();
                 }else {
-                    Toast.makeText(getApplicationContext(), "Failure Join", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "이미 존재하는 사용자입니다.", Toast.LENGTH_LONG).show();
                 }
             }
         }
         JoinAsync la = new JoinAsync();
         la.execute(email, password);
-    }
-
-
-    // DB에서 data 찾기
-    private void ValidCheck(final String email) {
-
-        class validAsync extends AsyncTask<String, Void, String> {
-            @Override
-            protected void onPreExecute() {
-                super.onPreExecute();
-            }
-            @Override
-            protected String doInBackground(String... params) {
-                String email = params[0];
-
-                InputStream is = null;
-                List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-                nameValuePairs.add(new BasicNameValuePair("email", email));
-                String result = null;
-
-                try{
-                    HttpClient httpClient = new DefaultHttpClient();
-                    HttpPost httpPost = new HttpPost("http://155.230.86.192/smartfarm/validCheck.php");
-                    httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
-
-                    HttpResponse response = httpClient.execute(httpPost);
-
-                    HttpEntity entity = response.getEntity();
-
-                    is = entity.getContent();
-
-                    BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"), 8);
-                    StringBuilder sb = new StringBuilder();
-
-                    String line = null;
-                    while ((line = reader.readLine()) != null)
-                    {
-                        sb.append(line + "\n");
-                    }
-                    result = sb.toString();
-                } catch (ClientProtocolException e) {
-                    e.printStackTrace();
-                } catch (UnsupportedEncodingException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                return result;
-            }
-
-            @Override
-            protected void onPostExecute(String result){
-                String s = result.trim();
-                if(s.equalsIgnoreCase("failure")){
-                    validCheck = true;
-                }else {
-                    Toast.makeText(getApplicationContext(), "이미 존재하는 사용자입니다.", Toast.LENGTH_LONG).show();
-                }
-            }
-        }
-        validAsync la = new validAsync();
-        la.execute(email);
     }
 }
