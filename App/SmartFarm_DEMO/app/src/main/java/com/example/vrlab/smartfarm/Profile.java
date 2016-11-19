@@ -42,7 +42,7 @@ public class Profile extends ListActivity {
                 null
         );
 
-        db.execSQL("CREATE TABLE IF NOT EXISTS plant (_id INTEGER PRIMARY kEY,email TEXT,name TEXT,date TEXT);"); //식물 이름
+        db.execSQL("CREATE TABLE IF NOT EXISTS plant1 (_id INTEGER PRIMARY kEY,email TEXT,name TEXT,date TEXT);"); //식물 이름
         Cursor c = db.rawQuery("SELECT name,date plant1;",null);
         startManagingCursor(c);
         ListAdapter adapt = new SimpleCursorAdapter(
@@ -82,7 +82,7 @@ public class Profile extends ListActivity {
                                         + plant_name.getText().toString() + "', '"
                                         + _today + "');";
                                 SQLiteDatabase db = openOrCreateDatabase(
-                                        "plant.db",
+                                        "plant1.db",
                                         SQLiteDatabase.CREATE_IF_NECESSARY,
                                         null
                                 );
@@ -94,11 +94,12 @@ public class Profile extends ListActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String sql =
-                        "DELETE FROM plant WHERE name = '"+plant_name.getText().toString()+"';";
-              //"DELETE FROM plant WHERE name = '"+plant_name.getText().toString()+"' AND email = '"+email+';";
+                        "DELETE FROM plant1 WHERE name = '"+plant_name.getText().toString()+"';";
+              //"DELETE FROM plant1 WHERE name = '"+plant_name.getText().toString()+"' AND email = '"+email+';";
+                //이거 쓰시면 될텐데 확인 한 번 해주세요
 
                 SQLiteDatabase db = openOrCreateDatabase(
-                        "plant.db",
+                        "plant1.db",
                         SQLiteDatabase.CREATE_IF_NECESSARY,
                         null
                 );
