@@ -6,11 +6,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class Detail extends Activity implements OnClickListener {
+public class Detail extends Activity implements View.OnClickListener {
     MyDBHelper mDBHelper;
     int mId;
     String today;
