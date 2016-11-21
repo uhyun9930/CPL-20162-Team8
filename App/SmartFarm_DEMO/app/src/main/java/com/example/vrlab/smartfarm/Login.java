@@ -88,7 +88,7 @@ public class Login extends AppCompatActivity {
 
                 try{
                     HttpClient httpClient = new DefaultHttpClient();
-                    HttpPost httpPost = new HttpPost("http://155.230.86.79/smartfarm/login.php");
+                    HttpPost httpPost = new HttpPost("http://155.230.86.83/smartfarm/login.php");
                     httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 
                     HttpResponse response = httpClient.execute(httpPost);

@@ -21,9 +21,11 @@ import java.io.InputStreamReader;
 import java.net.URI;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
-
+//155.230.86.111
+//10.10.10.179
 public class Menu extends AppCompatActivity {
 
     String myJSON;
@@ -31,6 +33,8 @@ public class Menu extends AppCompatActivity {
     private static final String TAG_RESULTS = "result";
     private static final String TAG_EMAIL = "email";
     private static final String TAG_PID = "pid";
+    private static final String TAG_PNAME = "pname";
+    private static final String TAG_DATE = "date";
     private static final String TAG_TEMPERATURE = "temperature";
     private static final String TAG_SOIL_HUMID = "soil_humid";
     private static final String TAG_HUMID = "humid";
@@ -38,10 +42,13 @@ public class Menu extends AppCompatActivity {
     private static final String TAG_TIME_INFO = "time_info";
     private static final String TAG_DATE_INFO = "date_info";
 
+
     JSONArray farms = null;
     JSONArray info = null;
-    static ArrayList<HashMap<String, String>> farmList; // pid pname 정보
+    static ArrayList<HashMap<String, String>> farmList; // email pid pname date 정보
     static ArrayList<HashMap<String, String>> infoList; // plant_info
+
+    static String pid;
 
     static String year;
     static String month;
@@ -49,8 +56,6 @@ public class Menu extends AppCompatActivity {
 
     static String nowDate;
 
-  //  private ListView mListview = null;
-    //String[] menu = {"그래프","카메라","날씨","관리"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,27 +70,12 @@ public class Menu extends AppCompatActivity {
         nowDate= year + "-" + month+ "-" + day;
 
         // DB 데이터 받기
-        farmList = new ArrayList<HashMap<String, String>>();
         infoList = new ArrayList<HashMap<String, String>>();
-
+        farmList = new ArrayList<HashMap<String, String>>();
         String email=Login.email;
         getFarmData(email);
-        String pid="1"; // 식물선택
+        pid="1"; // 식물선택
         getInfoData(pid);
-       /* ListView listView = (ListView)findViewById(R.id.listView);
-
-        ArrayList<String> arrName = new ArrayList<String>();
-        arrName.add("그래프");
-        arrName.add("카메라");
-        arrName.add("날씨");
-        arrName.add("관리");
-        ArrayAdapter<String> adapName = new ArrayAdapter<String>(
-                this,
-                R.layout.item,
-                R.id.name,
-                arrName
-        );
-        listView.setAdapter(adapName);*/
     }
     public void onWeather(View v)
     {
@@ -109,12 +99,12 @@ public class Menu extends AppCompatActivity {
         class GetDataJSON extends AsyncTask<String, Void, String> {
             @Override
             protected String doInBackground(String... params) {
-                String email = params[0];
 
+                String email = params[0];
                 InputStream inputStream = null;
                 String result = null;
                 try {
-                    String link = "http://155.230.86.79/smartfarm/farm.php?email="+email;
+                    String link = "http://155.230.86.83/smartfarm/farm_info.php?email="+email;
                     HttpClient httpclient = new DefaultHttpClient();
                     HttpGet request = new HttpGet();
                     request.setURI(new URI(link));
@@ -159,19 +149,21 @@ public class Menu extends AppCompatActivity {
                 JSONObject c = farms.getJSONObject(i);
                 String email = c.getString(TAG_EMAIL);
                 String pid = c.getString(TAG_PID);
-
+                String pname=c.getString(TAG_PNAME);
+                String date=c.getString(TAG_DATE);
                 HashMap<String, String> farms = new HashMap<String, String>();
 
                 farms.put(TAG_EMAIL, email);
                 farms.put(TAG_PID, pid);
-                farmList.add(farms);
+                farms.put(TAG_PNAME, pname);
+                farms.put(TAG_DATE, date);
+                farmList.add(i, farms);
+                //farmList.add(farms);
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
     }
-
-
     public void getInfoData(final String pid) {
         class GetDataJSON extends AsyncTask<String, Void, String> {
             @Override
@@ -181,7 +173,7 @@ public class Menu extends AppCompatActivity {
                 InputStream inputStream = null;
                 String result = null;
                 try {
-                    String link = "http://155.230.86.79/smartfarm/plant_info.php?pid="+pid;
+                    String link = "http://155.230.86.83/smartfarm/plant_info.php?pid="+pid;
                     HttpClient httpclient = new DefaultHttpClient();
                     HttpGet request = new HttpGet();
                     request.setURI(new URI(link));

@@ -32,7 +32,7 @@ public class ExToday extends Activity implements AdapterView.OnItemClickListener
         TextView text = (TextView) findViewById(R.id.texttoday);
         text.setText(today);
 
-        mDBHelper = new MyDBHelper(this, "Today.db", null, 1);
+        mDBHelper = new MyDBHelper(this, "Today1.db", null, 1);
         SQLiteDatabase db = mDBHelper.getWritableDatabase();
 
         cursor = db.rawQuery(

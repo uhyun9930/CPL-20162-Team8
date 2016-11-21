@@ -36,6 +36,10 @@ public class NoticeMenu extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 //메인으로
+                                Intent intent = new Intent(getApplicationContext(), Login.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                                Login.email = "";
+                                startActivity(intent);
                             }
                         })
                 .setNegativeButton("취소", new DialogInterface.OnClickListener() {
