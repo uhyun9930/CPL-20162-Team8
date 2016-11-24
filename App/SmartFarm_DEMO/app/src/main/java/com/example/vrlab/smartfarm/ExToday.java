@@ -6,16 +6,14 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
-public class ExToday extends Activity implements OnItemClickListener,
-        OnClickListener {
+public class ExToday extends Activity implements AdapterView.OnItemClickListener,
+        View.OnClickListener {
     MyDBHelper mDBHelper;
     String today;
     Cursor cursor;
@@ -34,7 +32,7 @@ public class ExToday extends Activity implements OnItemClickListener,
         TextView text = (TextView) findViewById(R.id.texttoday);
         text.setText(today);
 
-        mDBHelper = new MyDBHelper(this, "Today.db", null, 1);
+        mDBHelper = new MyDBHelper(this, "Today1.db", null, 1);
         SQLiteDatabase db = mDBHelper.getWritableDatabase();
 
         cursor = db.rawQuery(
