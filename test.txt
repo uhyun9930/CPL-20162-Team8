@@ -1,0 +1,415 @@
+다른 프로그램 제어하기
+
+ [ 외부 프로그램의 실행과 종료여부를 판단 ]
+ 
+ 
+
+자신의 어플리케이션이 아닌 다른 어플리케이션의 종료여부를 판단해야할 경우에 사용합니다. 예를 들어, winzip내의 인스톨를 실행시키면, 압축된 프로그램이 바로 인스톨이 되는 경우를 보셨을껍니다. 이때, 그 인스톨되는 프로그램이 종료되었을 때, winzip도 비로소 종료가 됩니다.
+
+ 
+ 
+ 
+
+1. 어플리케이션 클래스의 사전 준비
+
+ 
+
+외부 어플리케이션의 정보를 관리하기위한 정보구조체를 선언압니다.이때, 어플리케이션 클래스에 Protected로 작성해 둡니다.
+
+ 
+
+class CALApp : public CWinApp
+{
+
+protected:
+
+PROCESS_INFORMATION pinfo;
+
+};
+ 
+
+이때, pinfo의 값은 쓰레기값을 갖고 있으므로, 이에대한 초기화를 해 줍니다.
+
+ 
+
+// CALApp 생성자 
+CALApp::CALApp()
+{
+
+// TODO
+
+pinf.hProcess=NULL;
+pinf.hThread=NULL;
+pinf.dwProcessId=0L;
+pinf.dwThreadId=0L;
+
+}
+ 
+
+2. 외부 어플리케이션을 정보를 저장한뒤 실행시킵니다.
+
+ 
+
+// 다른 프로그램을 기동하는 루틴
+int CALApp::ExecuteOutsideEditor()
+{
+
+STARTUPINFO sinfo;
+
+if(IsOutsideEditorRunning())
+
+return -2;
+
+memset(&sinfo, 0x00, sizeof(sinfo));
+
+if(CreateProcess(NULL, szCmdLine, NULL, NULL, FALSE, 0, NULL, NULL, &sinfo, &pinfo))
+
+return -1;
+
+else
+
+return 0;
+
+}
+ 
+
+즉, 외부프로그램을 실행하면서, 그에대한 종료여부를 판단하기위해 정보구조체를 저장하는것이죠..
+
+szCmdLine은 실행시킬 외부프로그램의 이름을 저장하는 스트링변수이다. 예를 들어, 아래와 같은 형식의 스트링을 저장시킨다고 보면됩니다.
+
+ 
+
+CString szCmdLine; 
+szCmdLine.Format("c:\\windows\\notepad.exe c:\\help.txt");
+ 
+
+즉, 위의 내용은 "윈도우에 있는 메모장에 루트디렉토리에 있는 헬프파일을 여는 외부프로그램을 실행시키는 의미"가 되는 것이 되는것입니다.(노파심에서 말씀드리는데, 프로그램상에서는 \를 쓰기 위해서는 \\두 번 써야한다는건 아시겠죠?)
+
+ 
+
+if(IsOutsideEditorRunning()) 
+return -2;
+ 
+
+위의 명령문은 외부 프로그램이 이미 실행상태인지를 의미합니다. 이는 외부 프로그램을 관리하는 정보변수가  pinfo하나밖에 없기 때문에 한번에 하나의 외부프로그램을 실행할 수 있기 때문입니다. 만약에 복수의 외부 프로그램을 실행하고 싶으시다면, 이 정보구조체변수를 배열과 같이 복수개로 만들어 놓으면 됩니다. 이때는 카운터가 필요하겠죠 ?
+
+memset은 STARTUPINFO 구조 체형 변수 pinfo를 프로세스의 실행마다 초기화합니다. memset(&sinfo, 0x00, sizeof(sinfo))은, sinfo의 모든 멤버 변수에 0을 대입함을 의미합니다.
+
+CreateProcess 함수는 여러 가지 인수를 갖지만,  szCmdLine만 신경을 쓰시면 됩니다.
+
+ 
+
+ 
+
+3. 외부 어플리케이션이 아직 살아 있을까를 조사하는 루틴
+
+ 
+
+// 기동한 프로그램이 아직 살아 있을까 탐색하는 루틴
+int CALApp::IsOutsideEditorRunning()
+{
+
+unsigned long l;
+
+if(pinfo.hProcess)
+{
+
+GetExitCodeProcess(pinfo.hProcess, &l);
+if(l==STILL_ACTIVE)
+
+return -1;       //동작중은 실행하지 않는다.
+
+}
+
+return 0;
+
+}
+ 
+
+pinfo는 위에서 실행한 외부프로그램의 현재상태가 저장되어 있습니다. 즉, pinfo.hProcess값이 NULL 인가 아닌가를 판단합니다. 그 값이NULL인경우는, 현재 실행중이나 판정하기 위한 정보가 없음을 의미하며,  NULL이 아닌 경우는 판정하기위한 정보가 생성되었음을 의미하고, pinf.hProcess로부터, GetExitProcess Win32API 함수를 개입시켜, 외부 프로그램의 상태를 나타냅니다.
+
+이렇게 얻은 값을 조사해 줌으로써, 외부 프로그램의 상태를 조사할 수 있습니다. 만일 동작중이면, STILL_ACTIVE를 의미하는것입니다.
+
+ 
+
+4. 현재 정보를 체크합니다.
+
+ 
+
+위와 같은 순서로 하면, 대부분 필요한 정보를 얻을 수 있습니다. 그러나 가장 핵심이 되는 부분이 빠졌죠 ? 바로 pinfo의 프로세스상태를 체크해주는 루틴이 필요합니다. 이것은 주기적으로 체크를 해야하기 때문에 WM_TIMER 메세지에 의해 실행되는 CWnd::OnTimer를 사용하면 간단히 해결됩니다.
+
+이때, 타이머처리는 어플리케이션 클래스에 둘 수 없으므로, CMainFrame등과 같은 다른 클래스에 삽입합니다.
+
+ 
+
+void CMainFrame::OnTimer(UINT nIDEvent) 
+{
+
+// pApp는 어플리케이션 클래스에의 포인터를 의미합니다. if(pApp->IsOutsideEditorRunning()==0)
+{
+
+// 만일 다른기능을 추가시, 아래 부분을 수정합니다.
+
+AfxMessageBox("실행한 프로그램이 종료했습니다."); 
+
+CFrameWnd::OnTimer(nIDEvent);
+KillTimer(nIDEvent);
+return;
+
+}
+
+CFrameWnd::OnTimer(nIDEvent);
+
+}
+ 
+
+여기서는 단순히 메시지 박스를 출력하도록 했지만, 이 부분을 수정해서, 다양한 기능을 추가할 수 있습니다.
+ 
+
+
+
+
+다른 프로그램 제어하기(2)
+  
+[ 외부프로그램 제어 ]
+ 
+ 
+
+Dos 프로그램의 경우 하나의 프로세서에 하나의 프로그램만이 동작을 합니다. 그러나 윈도우 프로그램의 경우 여러개의 프로그램이 동작할 수가 있죠 ? 별개의 프로그램의 경우에는 그 상황이 별로 문제가 되지 않지만, 만약 어떤 프로그램내에서 다른 프로그램의 실행을 생성한 경우는 가끔 문제가 되는 경우가 생깁니다. 예를 들어 HTML편집기에서 그 소스를 메모장으로 보내는 프로그램이 있다고 생각해 봅시다. 그럴 경우 편집기에서는 메모장을 생성하고, html태그들을 메모장으로 보냅니다. 순서적으로는 문제가 되지 않지만, 메모장 생성이 조금 느린 경우에는 문제가 생길 수 있습니다. 즉, 메모장을 실행할 수 있는 상태가 된 후에야, 데이터를 보낼 수 있는 방식이 필요하다는의미가 됩니다. 이럴 경우에 아래와 같은 형식으로 제어를 할 수 있습니다.
+
+ 
+ 
+
+STARTUPINFO suinfo;
+PROCESS_INFORMATION pinfo;
+ZeroMemory(&suinfo, sizeof(suinfo));
+sui.cb=sizeof(suinfo);
+CreateProcess(NULL, "c:\\win\\notepad.exe", NULL, NULL, TRUE, 0, NULL, NULL, &suinfo, &pinfo);
+WaitForInputIdle(pinfo.hProcess, INFINITE);
+ 
+
+ 
+
+코드자체는 단순합니다. 순서적으로, 메모장의 실행을 생성하고, 그 프로세서가 실행가능한 상태가 될 때까지 아이들(WaitForInputIdle)상태에 머물 게 됩니다. 메모장이 윈도우화면에 나타났을 때, 메모장을 사용할 수 있습니다.
+
+
+FindWindow: 윈도우 찾기
+
+HWND FindWindow(
+
+   LPCTSTR lpClassName, //클래스명 (NULL 시 모든 클래스조사)
+
+   LPCTSTR lpWindowName //윈도우 캡션명만 사용가능 (NULL 시모든 윈도우 캡션 검색)
+
+);
+
+ 
+
+FindWindowEx: 윈도우 자세히 찾기(부모 윈도우의 자식윈도우 찾기 기능 포함)
+
+HWND FindWindowEx(
+
+   HWND hwndParent,
+
+   HWND hwndChildAfter,
+
+   LPCTSTR lpszClass,
+
+   LPCTSTR lpszWindow
+
+);
+
+hwndParent와 hwndChildAfter가 NULL 일 경우는 FindWindow와 동일
+
+ 
+
+Parameters
+
+hwndParent : 찾고자 한는 자식윈도우의 부모윈도우 핸들
+
+hwndChildAfter : 찾기 시작할 자식윈도우 핸들 ? 해당 자식윈도우 핸들의 다음 순번부터 찾기 시작함.
+
+lpszClass : 클래스명.NULL 시 모든 클래스명 비교.
+
+lpszWindow : 윈도우 제목(캡션). NULL 시 모든 윈도우명 비교.
+
+ 
+
+클래스명 참고자료 : https://msdn.microsoft.com/en-us/library/ms633574(VS.85).aspx
+
+Class
+
+Description
+
+ComboLBox
+
+The class for the list box contained in a combo box.
+
+DDEMLEvent
+
+The class for Dynamic Data Exchange Management Library (DDEML) events.
+
+Message
+
+The class for a message-only window.
+
+#32768
+
+The class for a menu.
+
+#32769
+
+The class for the desktop window.
+
+#32770
+
+The class for a dialog box.
+
+#32771
+
+The class for the task switch window.
+
+#32772
+
+The class for icon titles.
+
+ 
+
+기본 진행순서
+
+1. FindWindow를 이용하여 다른 프로그램의 콘트롤 핸들을구한다.
+
+2. 메시지를 전달한다.
+
+ 
+
+예외사항
+
+캡션바가 없는 대화상자이며, 메인 대화상자에서 Modal이 아닌 Modaless로 동적 생성된 대화상자이다.
+
+SPY++을 통해 조사해 보니 캡션은 “”, 클래스명은 #32770임. 또한전체 윈도우를 검색해 보니 동일한 조건의 윈도우가 여러 개 있음.
+
+FindWindow를 사용할 수 없음.
+
+여러가지 조건을 만들어서 구현(부모윈도우의 핸들은 구할 수 있으므로이를 이용)
+
+
+ 
+
+LRESULTCBarcodeScannerDlg::OnBarCodeReadHandy(WPARAM wParam, LPARAM lParam)
+
+{
+
+        CStringstrSerial;
+
+        strSerial.Format("%s",g_szHandyReceiveBuffer);
+
+ 
+
+        CStringstrSerialText;
+
+        strSerialText.Format("%s",strSerial);
+
+ 
+
+        SetDlgItemText(IDC_EDIT_DATA, strSerialText );
+
+ 
+
+        // 캡션명이없는 대화상자를 찾는다.
+
+        HWNDhWndNext = ::FindWindowEx(NULL, NULL, "#32770", "");
+
+ 
+
+        // 부모윈도우의 캡션을 이용하여 핸들을 구한다.
+
+        // 만약부모 윈도우 캡션마저 없다면, 자식윈도우가 가지고 있는 컨트롤들의ID와 비교.
+
+        HWNDhWndMain = ::FindWindow(NULL,"DCU Monitoring S/W");
+
+ 
+
+        while(hWndNext )
+
+        {
+
+               //캡션명이 없는 대화상자의 부모를 찾는다.
+
+               CWnd* pWnd = CWnd::FromHandle(hWndNext)->GetParent();
+
+ 
+
+               //알고 있는 ID를 비교하여 일치하지 않을 경우는 계속해서 다음 윈도우를 찾음.
+
+               //두 번째 인자 이후부터 찾도록 hWndNext를 다시 대입.
+
+               if(pWnd->m_hWnd != hWndMain )
+
+                       hWndNext= ::FindWindowEx(NULL, hWndNext, "#32770", "");
+
+               else
+
+                       break;
+
+        }
+
+ 
+
+        // 조건에맞는 윈도우가 없음.
+
+        if(hWndNext == NULL )
+
+               returnFALSE;
+
+ 
+
+        // 찾았으므로자식 윈도우가 가지고 있는 콘트롤들의 핸들을 구한다.
+
+        CWnd* pCtrlEdit = NULL;
+
+        pCtrlEdit= CWnd::FromHandle(hWndNext)-> GetDlgItem( 0x0437 );
+
+ 
+
+        CWnd* pCtrlBtn = NULL;
+
+        pCtrlBtn= CWnd::FromHandle(hWndNext)-> GetDlgItem( 0x03FC );
+
+ 
+
+ 
+
+ 
+
+        intnLen = strSerialText.GetLength();
+
+        charstr[255] = {0,};
+
+ 
+
+        for(int i = 0 ; i < nLen ; i++ )
+
+               str[i]= strSerialText.GetAt(i);
+
+ 
+
+        if(pCtrlEdit != NULL)
+
+        {
+
+               //에디트 상자에 원하는 데이터를 전달한다.
+
+               ::SendMessage(pCtrlEdit->m_hWnd,WM_SETTEXT, nLen, (WPARAM)str);
+
+               //버튼을 클릭하도록 한다.
+
+               ::SendMessage(pCtrlBtn->m_hWnd,BM_CLICK, 0, 0);
+
+        }
+
+ 
+
+        returnTRUE;
+
+}
